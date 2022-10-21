@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZFI081" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,1570" sap2010:WorkflowViewState.IdRef="Transacción_ZFI081_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZFI081" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,5154" sap2010:WorkflowViewState.IdRef="Transacción_ZFI081_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="120">
       <x:String>System.Activities</x:String>
@@ -110,10 +110,9 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="957,1873" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="957,5049" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="XMLRutas" />
       <Variable x:TypeArguments="sxl:XDocument" Name="strXML" />
@@ -134,10 +133,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Entrar a SAP" sap:VirtualizedContainerService.HintSize="915,66" sap2010:WorkflowViewState.IdRef="Sequence_45">
+    <Sequence DisplayName="Entrar a SAP" sap:VirtualizedContainerService.HintSize="915,2993" sap2010:WorkflowViewState.IdRef="Sequence_45">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -191,12 +190,12 @@
                   <uix:TargetAnchorable DesignTimeRectangle="263, 225, 34, 20" ElementType="InputBox" FriendlyName="'CTextField Sociedad'" FullSelectorArgument="&lt;sap id='usr/ctxtP_BUKRS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtP_BUKRS' /&gt;" Guid="4cab8dbc-f3fb-4503-97ad-010abeeb77e3" InformativeScreenshot="3f4c2e08c3fd9568f010de9d3ce06323.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="22.08.2022" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="21.10.2022" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="438, 247, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Día'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FECHA-HIGH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FECHA-HIGH' /&gt;" Guid="6c3a65b5-e10b-403c-9656-84ff513be524" InformativeScreenshot="cbb637be70e7fc6bac98e7dc93ec2f3c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="15.04.2022" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="10.10.2022" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 247, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Día'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FECHA-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FECHA-LOW' /&gt;" Guid="733f6489-d9e6-4945-8edd-bc1b51faad35" InformativeScreenshot="5537fe946f81b23e8c0326ce6dc2dd4e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
@@ -206,7 +205,7 @@
                   <uix:TargetAnchorable DesignTimeRectangle="263, 291, 20, 20" ElementType="InputBox" FriendlyName="'K9'" FullSelectorArgument="&lt;sap id='usr/ctxtS_BLART-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_BLART-LOW' /&gt;" Guid="9b784914-81d8-49a3-9019-33d3d3b5f20a" InformativeScreenshot="f541e7ddbcd2e28ad517032c9d86e5ba.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'TextField Nombre'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'TextField Nombre'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="RBENITEZ" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 313, 90, 20" ElementType="InputBox" FriendlyName="'TextField Nombre'" FullSelectorArgument="&lt;sap id='usr/txtS_USNAM-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtS_USNAM-LOW' /&gt;" Guid="1c4c0d73-74e3-465a-9aa0-48fbc43f4801" InformativeScreenshot="ba10c412f2755da1a490baabd05ba2c3.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
@@ -249,29 +248,29 @@
         </sap:WorkflowViewStateService.ViewState>
       </ucas:SelectMenuItem>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="915,236" sap2010:WorkflowViewState.IdRef="CommentOut_46">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="915,51" sap2010:WorkflowViewState.IdRef="CommentOut_46">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_89">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="638,1149" sap2010:WorkflowViewState.IdRef="Sequence_89">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Envio de los correos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_80">
+          <Sequence DisplayName="Envio de los correos" sap:VirtualizedContainerService.HintSize="596,1057" sap2010:WorkflowViewState.IdRef="Sequence_80">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="376,518" sap2010:WorkflowViewState.IdRef="Sequence_84">
+            <Sequence sap:VirtualizedContainerService.HintSize="554,965" sap2010:WorkflowViewState.IdRef="Sequence_84">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExportUiTree ExportedString="{x:Null}" Filter="{x:Null}" OperationTimeoutMS="{x:Null}" DestinationFile="Config\Archivos\DataZFI014.xml" DisplayName="Export UI Tree 'Tree  SAP.TableTreeCont...'" Format="XML" sap:VirtualizedContainerService.HintSize="334,235" sap2010:WorkflowViewState.IdRef="ExportUiTree_1" IncludeScreenshots="False" Overwrite="True" Priority="Performance" UiFramework="Default">
+              <ui:ExportUiTree ExportedString="{x:Null}" Filter="{x:Null}" OperationTimeoutMS="{x:Null}" DestinationFile="Config\Archivos\DataZFI014.xml" DisplayName="Export UI Tree 'Tree  SAP.TableTreeCont...'" Format="XML" sap:VirtualizedContainerService.HintSize="512,235" sap2010:WorkflowViewState.IdRef="ExportUiTree_1" IncludeScreenshots="False" Overwrite="True" Priority="Performance" UiFramework="Default">
                 <ui:ExportUiTree.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="996986ea-851b-4e87-8599-0e77b7656a97" InformativeScreenshot="2f6349217eaa49bbbbbf6f47ff976416" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Generación de Comprobantes de Retención (SRI)' /&gt;&lt;sap id='shellcont/shell/shellcont[0]/shell/shellcont[1]/shell[1]' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -289,7 +288,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExportUiTree>
-              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign sap:VirtualizedContainerService.HintSize="512,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[DataZFI014]</OutArgument>
                 </Assign.To>
@@ -297,7 +296,7 @@
                   <InArgument x:TypeArguments="x:String">C:\Users\rpaeyuser\Documents\UiPath\Robot Cuentas por Cobrar\Config\Archivos\DataZFI014.xml</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_45">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,498" sap2010:WorkflowViewState.IdRef="CommentOut_45">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_88">
                     <sap:WorkflowViewStateService.ViewState>
@@ -332,7 +331,7 @@
                 </ui:CommentOut.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -341,14 +340,20 @@
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Compensar" sap:VirtualizedContainerService.HintSize="915,1399" sap2010:WorkflowViewState.IdRef="Sequence_91">
+    <Sequence DisplayName="Compensar" sap:VirtualizedContainerService.HintSize="915,1833" sap2010:WorkflowViewState.IdRef="Sequence_91">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="873,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="a0520b3e-bcaf-4345-82bc-aca1a697c580" Version="V2">
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="873,539" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="a0520b3e-bcaf-4345-82bc-aca1a697c580" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -373,18 +378,18 @@
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="873,1216" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V2">
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="873,1162" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,927" sap2010:WorkflowViewState.IdRef="Sequence_92">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,873" sap2010:WorkflowViewState.IdRef="Sequence_92">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="MensajeError" />
               </Sequence.Variables>
@@ -406,9 +411,9 @@
                   <uix:TargetAnchorable DesignTimeRectangle="22, 1019, 1892, 29" FriendlyName="'Documento Nro.'" FullSelectorArgument="&lt;sap id='sbar' /&gt;" FuzzySelectorArgument="&lt;sap id='sbar' check:text='Documento Nro. 600005821 ya fue Autorizado' /&gt;" Guid="2bf3c679-6bc1-405e-a746-41e9bfaec764" InformativeScreenshot="ac6d0dda42744951155b167b3d3965be.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Generación de Comprobantes de Retención (SRI)' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NGetAttribute.Target>
               </uix:NGetAttribute>
-              <If Condition="[MensajeError = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="797,336" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[MensajeError = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="797,337" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_93">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -418,7 +423,7 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,177" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_94">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
