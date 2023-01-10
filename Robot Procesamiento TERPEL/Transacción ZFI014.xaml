@@ -1,11 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZFI081" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZFI081" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_struitreexlsx" Type="InArgument(x:String)" />
+    <x:Property Name="strHoy" Type="InArgument(x:String)" />
+    <x:Property Name="strFechaInicioConsulta" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,6956</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,8064</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZFI081_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="122">
@@ -76,7 +78,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="45">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -121,10 +123,10 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="1313,6851" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="1257,7999" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="XMLRutas" />
       <Variable x:TypeArguments="sxl:XDocument" Name="strXML" />
@@ -145,17 +147,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Entrar a SAP" sap:VirtualizedContainerService.HintSize="1271,3252" sap2010:WorkflowViewState.IdRef="Sequence_45">
+    <Sequence DisplayName="Entrar a SAP" sap:VirtualizedContainerService.HintSize="1195,3809" sap2010:WorkflowViewState.IdRef="Sequence_45">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
-      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SAP Front End\SAP Logon.lnk" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" Timeout="5000" />
-      <ucas:Logon Window="{x:Null}" ConnectionName="QA1_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
-      <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="434,364" sap2010:WorkflowViewState.IdRef="Login_1" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="@Pil0to_rPA" Timeout="5000" Username="RPA_FACT">
+      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="442,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
+      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SAP Front End\SAP Logon.lnk" sap:VirtualizedContainerService.HintSize="442,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" Timeout="5000" />
+      <ucas:Logon Window="{x:Null}" ConnectionName="PRD_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="442,138" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
+      <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="442,365" sap2010:WorkflowViewState.IdRef="Login_2" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="%r9a_3Act89_%" Timeout="5000" Username="RPA_FACT">
         <ucas:Login.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="623633dd-5418-441b-b08b-a98a506256bc" InformativeScreenshot="23731caebaa988a33ed840b98f504d57" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
             <ui:Target.TimeoutMS>
@@ -173,51 +175,77 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ucas:Login>
-      <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="ZFI014">
-        <ucas:CallTransaction.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e232f2ea-e4a9-461f-8609-a8bf0a180768" InformativeScreenshot="ed9ff412ce91c62a47cc170d71bc11bc" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ucas:CallTransaction.Target>
-      </ucas:CallTransaction>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Arbol de Selección + Ride" sap:VirtualizedContainerService.HintSize="434,1663" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V2">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="442,446" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="2.00:00:00">
+        <ui:RetryScope.ActivityBody>
+          <ActivityAction>
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,271" sap2010:WorkflowViewState.IdRef="Sequence_112">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Sociedad'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="EC01" Version="V1">
+              <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="338,160" sap2010:WorkflowViewState.IdRef="CallTransaction_2" Transaction="ZFI014">
+                <ucas:CallTransaction.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5667060b-d3bb-492f-972f-da58e02ac0fc" InformativeScreenshot="0ad0489ae5716eea0df65ee1773950a5" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ucas:CallTransaction.Target>
+              </ucas:CallTransaction>
+            </Sequence>
+          </ActivityAction>
+        </ui:RetryScope.ActivityBody>
+        <ui:RetryScope.Condition>
+          <ActivityFunc x:TypeArguments="x:Boolean" />
+        </ui:RetryScope.Condition>
+      </ui:RetryScope>
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Arbol de Selección + Ride" sap:VirtualizedContainerService.HintSize="442,1907" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1617" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Sociedad'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="EC01" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 225, 34, 20" ElementType="InputBox" FriendlyName="'CTextField Sociedad'" FullSelectorArgument="&lt;sap id='usr/ctxtP_BUKRS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtP_BUKRS' /&gt;" Guid="4cab8dbc-f3fb-4503-97ad-010abeeb77e3" InformativeScreenshot="3f4c2e08c3fd9568f010de9d3ce06323.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="26.10.2022" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="[strHoy]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="438, 247, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Día'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FECHA-HIGH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FECHA-HIGH' /&gt;" Guid="6c3a65b5-e10b-403c-9656-84ff513be524" InformativeScreenshot="cbb637be70e7fc6bac98e7dc93ec2f3c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="10.10.2022" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="263, 247, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Día'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FECHA-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FECHA-LOW' /&gt;" Guid="733f6489-d9e6-4945-8edd-bc1b51faad35" InformativeScreenshot="5537fe946f81b23e8c0326ce6dc2dd4e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </uix:NTypeInto.Text>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Día'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="[strFechaInicioConsulta]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 247, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Día'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FECHA-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FECHA-LOW' /&gt;" Guid="733f6489-d9e6-4945-8edd-bc1b51faad35" InformativeScreenshot="5537fe946f81b23e8c0326ce6dc2dd4e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'K9'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="KR" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'K9'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="KR" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 291, 20, 20" ElementType="InputBox" FriendlyName="'K9'" FullSelectorArgument="&lt;sap id='usr/ctxtS_BLART-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_BLART-LOW' /&gt;" Guid="9b784914-81d8-49a3-9019-33d3d3b5f20a" InformativeScreenshot="f541e7ddbcd2e28ad517032c9d86e5ba.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Número'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="1024637" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Número'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="1024637" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 401, 90, 20" ElementType="InputBox" FriendlyName="'CTextField Número'" FullSelectorArgument="&lt;sap id='usr/ctxtS_LIFNR-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_LIFNR-LOW' /&gt;" Guid="bb875e9c-563a-4a04-acca-17001bb10131" InformativeScreenshot="a05cd12267445d803c6cadbef2ee5d04.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
@@ -235,22 +263,22 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ui:ReadRange AddHeaders="True" DataTable="[dtuitree]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="UiTree" WorkbookPath="C:\Users\rpaeyuser\Documents\UiPath\Robot Procesamiento TERPEL\Config\Archivos\UiTree.xlsx">
+      <ui:ReadRange AddHeaders="True" DataTable="[dtuitree]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="442,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="UiTree" WorkbookPath="[in_struitreexlsx]">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
           </InArgument>
         </ui:ReadRange.Range>
       </ui:ReadRange>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="CommentOut_52">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="442,52" sap2010:WorkflowViewState.IdRef="CommentOut_52">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_111">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,199" sap2010:WorkflowViewState.IdRef="Sequence_111">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange AddHeaders="True" DataTable="[dtuitree]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="UiTree" WorkbookPath="[in_struitreexlsx]">
+            <ui:ReadRange AddHeaders="True" DataTable="[dtuitree]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="UiTree" WorkbookPath="[in_struitreexlsx]">
               <ui:ReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -266,7 +294,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:FilterDataTable DataTable="[dtuitree]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtuitree]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[dtuitree]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="442,161" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtuitree]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -286,36 +314,46 @@
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
     </Sequence>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtuitree]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1271,3467" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtuitree]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1195,3866" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1237,3352" sap2010:WorkflowViewState.IdRef="Sequence_98">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1161,3750" sap2010:WorkflowViewState.IdRef="Sequence_98">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Arbol de Selección + Ride" sap:VirtualizedContainerService.HintSize="1195,3260" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Arbol de Selección + Ride" sap:VirtualizedContainerService.HintSize="1099,3639" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1161,2971" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1065,3349" sap2010:WorkflowViewState.IdRef="Sequence_99">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'TextField Número'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1119,216" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="[Row(&quot;Nro. Documento&quot;).ToString]" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'TextField Número'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1003,217" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="263, 269, 76, 20" ElementType="InputBox" FriendlyName="'TextField Número'" FullSelectorArgument="&lt;sap id='usr/txtS_BELNR-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtS_BELNR-LOW' /&gt;" Guid="885748d1-6e0a-4c01-83cc-9dc7961e932f" InformativeScreenshot="6616edecb2bcacf1d1782ff699b7b182.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.Text>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </uix:NTypeInto.Text>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'TextField Número'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1003,217" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="HardwareEvents" ScopeIdentifier="c4be2c8f-4141-410e-a658-2ec2580e6809" Text="[Row(&quot;Nro. Documento&quot;).ToString]" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="263, 269, 76, 20" ElementType="InputBox" FriendlyName="'TextField Número'" FullSelectorArgument="&lt;sap id='usr/txtS_BELNR-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtS_BELNR-LOW' /&gt;" Guid="885748d1-6e0a-4c01-83cc-9dc7961e932f" InformativeScreenshot="6616edecb2bcacf1d1782ff699b7b182.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EC SRI: Generación Comprobantes de Retención' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="1119,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Ejecutar   (F8)">
+                    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="1003,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Ejecutar   (F8)">
                       <ucas:SelectMenuItem.Items>
                         <scg:List x:TypeArguments="x:String" Capacity="4">
                           <x:String xml:space="preserve">Ejecutar   (F8)</x:String>
@@ -339,20 +377,20 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ucas:SelectMenuItem>
-                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="1119,539" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="a0520b3e-bcaf-4345-82bc-aca1a697c580" Version="V2">
+                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="1003,562" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="a0520b3e-bcaf-4345-82bc-aca1a697c580" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272" sap2010:WorkflowViewState.IdRef="Sequence_90">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NClick ClickType="Single" DisplayName="Click 'Button Seleccionar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a0520b3e-bcaf-4345-82bc-aca1a697c580" Version="V1">
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Button Seleccionar'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a0520b3e-bcaf-4345-82bc-aca1a697c580" Version="V1">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable DesignTimeRectangle="70, 153, 25, 25" ElementType="Button" FriendlyName="'Button Seleccionar'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[7]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[7]' /&gt;" Guid="13be8ceb-6d62-47c1-8fda-243bb5bcf0ef" InformativeScreenshot="4568d6bac5d5f3687c22dee69fbbe0f0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Generación de Comprobantes de Retención (SRI)' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                               </uix:NClick.Target>
@@ -370,20 +408,20 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NApplicationCard>
-                    <Sequence DisplayName="Compensar" sap:VirtualizedContainerService.HintSize="1119,1843" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                    <Sequence DisplayName="Compensar" sap:VirtualizedContainerService.HintSize="1003,1918" sap2010:WorkflowViewState.IdRef="Sequence_91">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="1077,1749" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V2">
+                      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Generación de Comprobantes de Retención (SRI)" sap:VirtualizedContainerService.HintSize="941,1803" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V2">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1043,1460" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="907,1513" sap2010:WorkflowViewState.IdRef="Sequence_92">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="MensajeError" />
                               </Sequence.Variables>
@@ -392,12 +430,12 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'Button Enviar'" sap:VirtualizedContainerService.HintSize="1001,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V1">
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Button Enviar'" sap:VirtualizedContainerService.HintSize="845,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V1">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable DesignTimeRectangle="104, 123, 20, 20" ElementType="Button" FriendlyName="'Button Enviar'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" Guid="f5926c25-26f7-44e6-afbc-55446c1b72f2" InformativeScreenshot="aabdacd22eb6edccfc4bc885413abd49.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Generación de Comprobantes de Retención (SRI)' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'Documento Nro.'" sap:VirtualizedContainerService.HintSize="1001,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V1">
+                              <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'Documento Nro.'" sap:VirtualizedContainerService.HintSize="845,207" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V1">
                                 <uix:NGetAttribute.Result>
                                   <OutArgument x:TypeArguments="x:String">[MensajeError]</OutArgument>
                                 </uix:NGetAttribute.Result>
@@ -405,7 +443,7 @@
                                   <uix:TargetAnchorable DesignTimeRectangle="22, 1019, 1892, 29" FriendlyName="'Documento Nro.'" FullSelectorArgument="&lt;sap id='sbar' /&gt;" FuzzySelectorArgument="&lt;sap id='sbar' check:text='Documento Nro. 600005821 ya fue Autorizado' /&gt;" Guid="2bf3c679-6bc1-405e-a746-41e9bfaec764" InformativeScreenshot="ac6d0dda42744951155b167b3d3965be.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Generación de Comprobantes de Retención (SRI)' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                 </uix:NGetAttribute.Target>
                               </uix:NGetAttribute>
-                              <If Condition="[(not MensajeError.ToUpper.Contains(&quot;ERROR&quot;)) and (not MensajeError.ToUpper.Contains(&quot;YA FUE AUTORIZADO&quot;))]" sap:VirtualizedContainerService.HintSize="1001,666" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If Condition="[(not MensajeError.ToUpper.Contains(&quot;ERROR&quot;)) and (not MensajeError.ToUpper.Contains(&quot;YA FUE AUTORIZADO&quot;))]" sap:VirtualizedContainerService.HintSize="845,521" sap2010:WorkflowViewState.IdRef="If_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -413,22 +451,22 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="478,507" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,361" sap2010:WorkflowViewState.IdRef="Sequence_93">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Enviado" />
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,51" sap2010:WorkflowViewState.IdRef="CommentOut_48">
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Enviado" />
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="CommentOut_48">
                                       <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,196" sap2010:WorkflowViewState.IdRef="Sequence_101">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;procesado&quot;]" />
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;procesado&quot;]" />
                                         </Sequence>
                                       </ui:CommentOut.Body>
                                       <sap:WorkflowViewStateService.ViewState>
@@ -438,156 +476,146 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,221" sap2010:WorkflowViewState.IdRef="CommentOut_50">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_109">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
-                                            <ueab:ExcelProcessScopeX.Body>
-                                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                                                <ActivityAction.Argument>
-                                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                                                </ActivityAction.Argument>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628,1295" sap2010:WorkflowViewState.IdRef="Sequence_104">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="586,1203" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Config\Archivos\UiTree.xlsx" WorkbookPath="[in_strUiTreexlsx]">
-                                                    <ueab:ExcelApplicationCard.Body>
-                                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                                                        <ActivityAction.Argument>
-                                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                                                        </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,937" sap2010:WorkflowViewState.IdRef="Sequence_103">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <ueab:FilterX ClearFilter="False" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,168" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
-                                                            <ueab:FilterX.FilterArgument>
-                                                              <ueabf:FilterArgument Mode="Advanced">
-                                                                <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                  <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                                                    <ueabf:AdvancedFilterArgument.Condition1>
-                                                                      <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[row(&quot;Path&quot;).ToString]" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition1>
-                                                                    <ueabf:AdvancedFilterArgument.Condition2>
-                                                                      <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition2>
-                                                                  </ueabf:AdvancedFilterArgument>
-                                                                </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                <ueabf:FilterArgument.BasicFiltersArgument>
-                                                                  <ueabf:BasicFilterArgument>
-                                                                    <ueabf:BasicFilterArgument.BasicFilters>
-                                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                                        <x:Null />
-                                                                      </scg:List>
-                                                                    </ueabf:BasicFilterArgument.BasicFilters>
-                                                                  </ueabf:BasicFilterArgument>
-                                                                </ueabf:FilterArgument.BasicFiltersArgument>
-                                                              </ueabf:FilterArgument>
-                                                            </ueab:FilterX.FilterArgument>
-                                                          </ueab:FilterX>
-                                                          <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,429" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;UiTree&quot;)]" SaveAfterEachRow="True">
-                                                            <ueab:ExcelForEachRowX.Body>
-                                                              <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
-                                                                <ActivityAction.Argument1>
-                                                                  <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
-                                                                </ActivityAction.Argument1>
-                                                                <ActivityAction.Argument2>
-                                                                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                                                                </ActivityAction.Argument2>
-                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,249" sap2010:WorkflowViewState.IdRef="Sequence_102">
-                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                    </scg:Dictionary>
-                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                  <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Comentario&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;Factura Contabilizada y enviada&quot;]" />
-                                                                </Sequence>
-                                                              </ActivityAction>
-                                                            </ueab:ExcelForEachRowX.Body>
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                          </ueab:ExcelForEachRowX>
-                                                          <ueab:FilterX ClearFilter="True" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,168" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
-                                                            <ueab:FilterX.FilterArgument>
-                                                              <ueabf:FilterArgument Mode="Advanced">
-                                                                <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                  <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                                                    <ueabf:AdvancedFilterArgument.Condition1>
-                                                                      <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[RowProveedor(1).ToString]" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition1>
-                                                                    <ueabf:AdvancedFilterArgument.Condition2>
-                                                                      <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition2>
-                                                                  </ueabf:AdvancedFilterArgument>
-                                                                </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                <ueabf:FilterArgument.BasicFiltersArgument>
-                                                                  <ueabf:BasicFilterArgument>
-                                                                    <ueabf:BasicFilterArgument.BasicFilters>
-                                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                                        <x:Null />
-                                                                      </scg:List>
-                                                                    </ueabf:BasicFilterArgument.BasicFilters>
-                                                                  </ueabf:BasicFilterArgument>
-                                                                </ueabf:FilterArgument.BasicFiltersArgument>
-                                                              </ueabf:FilterArgument>
-                                                            </ueab:FilterX.FilterArgument>
-                                                          </ueab:FilterX>
-                                                        </Sequence>
-                                                      </ActivityAction>
-                                                    </ueab:ExcelApplicationCard.Body>
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                                      <ueab:ExcelProcessScopeX.Body>
+                                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,459" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,348" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Config\Archivos\UiTree.xlsx" WorkbookPath="[in_strUiTreexlsx]">
+                                              <ueab:ExcelApplicationCard.Body>
+                                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                  </ueab:ExcelApplicationCard>
-                                                </Sequence>
-                                              </ActivityAction>
-                                            </ueab:ExcelProcessScopeX.Body>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ueab:ExcelProcessScopeX>
-                                        </Sequence>
-                                      </ui:CommentOut.Body>
-                                    </ui:CommentOut>
+                                                    <ueab:FilterX ClearFilter="False" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,169" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
+                                                      <ueab:FilterX.FilterArgument>
+                                                        <ueabf:FilterArgument Mode="Advanced">
+                                                          <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                            <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                                              <ueabf:AdvancedFilterArgument.Condition1>
+                                                                <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[row(&quot;Path&quot;).ToString]" />
+                                                              </ueabf:AdvancedFilterArgument.Condition1>
+                                                              <ueabf:AdvancedFilterArgument.Condition2>
+                                                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                                              </ueabf:AdvancedFilterArgument.Condition2>
+                                                            </ueabf:AdvancedFilterArgument>
+                                                          </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                          <ueabf:FilterArgument.BasicFiltersArgument>
+                                                            <ueabf:BasicFilterArgument>
+                                                              <ueabf:BasicFilterArgument.BasicFilters>
+                                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                                                  <x:Null />
+                                                                </scg:List>
+                                                              </ueabf:BasicFilterArgument.BasicFilters>
+                                                            </ueabf:BasicFilterArgument>
+                                                          </ueabf:FilterArgument.BasicFiltersArgument>
+                                                        </ueabf:FilterArgument>
+                                                      </ueab:FilterX.FilterArgument>
+                                                    </ueab:FilterX>
+                                                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,450" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;UiTree&quot;)]" SaveAfterEachRow="True">
+                                                      <ueab:ExcelForEachRowX.Body>
+                                                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                                          <ActivityAction.Argument1>
+                                                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                                          </ActivityAction.Argument1>
+                                                          <ActivityAction.Argument2>
+                                                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                                          </ActivityAction.Argument2>
+                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,269" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Comentario&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;Factura Contabilizada y enviada&quot;]" />
+                                                          </Sequence>
+                                                        </ActivityAction>
+                                                      </ueab:ExcelForEachRowX.Body>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ueab:ExcelForEachRowX>
+                                                    <ueab:FilterX ClearFilter="True" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,169" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
+                                                      <ueab:FilterX.FilterArgument>
+                                                        <ueabf:FilterArgument Mode="Advanced">
+                                                          <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                            <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                                              <ueabf:AdvancedFilterArgument.Condition1>
+                                                                <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[RowProveedor(1).ToString]" />
+                                                              </ueabf:AdvancedFilterArgument.Condition1>
+                                                              <ueabf:AdvancedFilterArgument.Condition2>
+                                                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                                              </ueabf:AdvancedFilterArgument.Condition2>
+                                                            </ueabf:AdvancedFilterArgument>
+                                                          </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                          <ueabf:FilterArgument.BasicFiltersArgument>
+                                                            <ueabf:BasicFilterArgument>
+                                                              <ueabf:BasicFilterArgument.BasicFilters>
+                                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                                                  <x:Null />
+                                                                </scg:List>
+                                                              </ueabf:BasicFilterArgument.BasicFilters>
+                                                            </ueabf:BasicFilterArgument>
+                                                          </ueabf:FilterArgument.BasicFiltersArgument>
+                                                        </ueabf:FilterArgument>
+                                                      </ueab:FilterX.FilterArgument>
+                                                    </ueab:FilterX>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ueab:ExcelApplicationCard.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ueab:ExcelApplicationCard>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ueab:ExcelProcessScopeX.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:ExcelProcessScopeX>
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="478,507" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="400,361" sap2010:WorkflowViewState.IdRef="Sequence_94">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="No enviado" />
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,51" sap2010:WorkflowViewState.IdRef="CommentOut_49">
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="No enviado" />
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="CommentOut_49">
                                       <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,196" sap2010:WorkflowViewState.IdRef="Sequence_105">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Notificación  al usuario&quot;]" />
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Notificación  al usuario&quot;]" />
                                         </Sequence>
                                       </ui:CommentOut.Body>
                                       <sap:WorkflowViewStateService.ViewState>
@@ -597,142 +625,133 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,221" sap2010:WorkflowViewState.IdRef="CommentOut_51">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_110">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
-                                            <ueab:ExcelProcessScopeX.Body>
-                                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                                                <ActivityAction.Argument>
-                                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                                                </ActivityAction.Argument>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628,1295" sap2010:WorkflowViewState.IdRef="Sequence_108">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="586,1203" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" TemplatePath="Config\Archivos\UiTree.xlsx" WorkbookPath="[in_strUiTreexlsx]">
-                                                    <ueab:ExcelApplicationCard.Body>
-                                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                                                        <ActivityAction.Argument>
-                                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                                                        </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,937" sap2010:WorkflowViewState.IdRef="Sequence_107">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <ueab:FilterX ClearFilter="False" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,168" sap2010:WorkflowViewState.IdRef="FilterX_3" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
-                                                            <ueab:FilterX.FilterArgument>
-                                                              <ueabf:FilterArgument Mode="Advanced">
-                                                                <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                  <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                                                    <ueabf:AdvancedFilterArgument.Condition1>
-                                                                      <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[row(&quot;Path&quot;).ToString]" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition1>
-                                                                    <ueabf:AdvancedFilterArgument.Condition2>
-                                                                      <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition2>
-                                                                  </ueabf:AdvancedFilterArgument>
-                                                                </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                <ueabf:FilterArgument.BasicFiltersArgument>
-                                                                  <ueabf:BasicFilterArgument>
-                                                                    <ueabf:BasicFilterArgument.BasicFilters>
-                                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                                        <x:Null />
-                                                                      </scg:List>
-                                                                    </ueabf:BasicFilterArgument.BasicFilters>
-                                                                  </ueabf:BasicFilterArgument>
-                                                                </ueabf:FilterArgument.BasicFiltersArgument>
-                                                              </ueabf:FilterArgument>
-                                                            </ueab:FilterX.FilterArgument>
-                                                          </ueab:FilterX>
-                                                          <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,429" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;UiTree&quot;)]" SaveAfterEachRow="True">
-                                                            <ueab:ExcelForEachRowX.Body>
-                                                              <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
-                                                                <ActivityAction.Argument1>
-                                                                  <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
-                                                                </ActivityAction.Argument1>
-                                                                <ActivityAction.Argument2>
-                                                                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                                                                </ActivityAction.Argument2>
-                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,249" sap2010:WorkflowViewState.IdRef="Sequence_106">
-                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                    </scg:Dictionary>
-                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                  <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Comentario&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;Factura Contabilizada, no enviada&quot;]" />
-                                                                </Sequence>
-                                                              </ActivityAction>
-                                                            </ueab:ExcelForEachRowX.Body>
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                          </ueab:ExcelForEachRowX>
-                                                          <ueab:FilterX ClearFilter="True" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,168" sap2010:WorkflowViewState.IdRef="FilterX_4" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
-                                                            <ueab:FilterX.FilterArgument>
-                                                              <ueabf:FilterArgument Mode="Advanced">
-                                                                <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                  <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                                                    <ueabf:AdvancedFilterArgument.Condition1>
-                                                                      <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[RowProveedor(1).ToString]" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition1>
-                                                                    <ueabf:AdvancedFilterArgument.Condition2>
-                                                                      <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
-                                                                    </ueabf:AdvancedFilterArgument.Condition2>
-                                                                  </ueabf:AdvancedFilterArgument>
-                                                                </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                                                <ueabf:FilterArgument.BasicFiltersArgument>
-                                                                  <ueabf:BasicFilterArgument>
-                                                                    <ueabf:BasicFilterArgument.BasicFilters>
-                                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                                        <x:Null />
-                                                                      </scg:List>
-                                                                    </ueabf:BasicFilterArgument.BasicFilters>
-                                                                  </ueabf:BasicFilterArgument>
-                                                                </ueabf:FilterArgument.BasicFiltersArgument>
-                                                              </ueabf:FilterArgument>
-                                                            </ueab:FilterX.FilterArgument>
-                                                          </ueab:FilterX>
-                                                        </Sequence>
-                                                      </ActivityAction>
-                                                    </ueab:ExcelApplicationCard.Body>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </ueab:ExcelApplicationCard>
-                                                </Sequence>
-                                              </ActivityAction>
-                                            </ueab:ExcelProcessScopeX.Body>
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                                      <ueab:ExcelProcessScopeX.Body>
+                                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_108">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                          </ueab:ExcelProcessScopeX>
-                                        </Sequence>
-                                      </ui:CommentOut.Body>
-                                    </ui:CommentOut>
+                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="626,1246" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" TemplatePath="Config\Archivos\UiTree.xlsx" WorkbookPath="[in_strUiTreexlsx]">
+                                              <ueab:ExcelApplicationCard.Body>
+                                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,979" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ueab:FilterX ClearFilter="False" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,169" sap2010:WorkflowViewState.IdRef="FilterX_3" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
+                                                      <ueab:FilterX.FilterArgument>
+                                                        <ueabf:FilterArgument Mode="Advanced">
+                                                          <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                            <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                                              <ueabf:AdvancedFilterArgument.Condition1>
+                                                                <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[row(&quot;Path&quot;).ToString]" />
+                                                              </ueabf:AdvancedFilterArgument.Condition1>
+                                                              <ueabf:AdvancedFilterArgument.Condition2>
+                                                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                                              </ueabf:AdvancedFilterArgument.Condition2>
+                                                            </ueabf:AdvancedFilterArgument>
+                                                          </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                          <ueabf:FilterArgument.BasicFiltersArgument>
+                                                            <ueabf:BasicFilterArgument>
+                                                              <ueabf:BasicFilterArgument.BasicFilters>
+                                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                                                  <x:Null />
+                                                                </scg:List>
+                                                              </ueabf:BasicFilterArgument.BasicFilters>
+                                                            </ueabf:BasicFilterArgument>
+                                                          </ueabf:FilterArgument.BasicFiltersArgument>
+                                                        </ueabf:FilterArgument>
+                                                      </ueab:FilterX.FilterArgument>
+                                                    </ueab:FilterX>
+                                                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,450" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;UiTree&quot;)]" SaveAfterEachRow="True">
+                                                      <ueab:ExcelForEachRowX.Body>
+                                                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                                          <ActivityAction.Argument1>
+                                                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                                          </ActivityAction.Argument1>
+                                                          <ActivityAction.Argument2>
+                                                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                                          </ActivityAction.Argument2>
+                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,269" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Comentario&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;Factura Contabilizada, no enviada&quot;]" />
+                                                          </Sequence>
+                                                        </ActivityAction>
+                                                      </ueab:ExcelForEachRowX.Body>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ueab:ExcelForEachRowX>
+                                                    <ueab:FilterX ClearFilter="True" ColumnName="Path" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,169" sap2010:WorkflowViewState.IdRef="FilterX_4" Range="[Excel.Sheet(&quot;UiTree&quot;)]">
+                                                      <ueab:FilterX.FilterArgument>
+                                                        <ueabf:FilterArgument Mode="Advanced">
+                                                          <ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                            <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                                              <ueabf:AdvancedFilterArgument.Condition1>
+                                                                <ueabf:AdvancedFilterCondition Operator="CONTAINS" Value="[RowProveedor(1).ToString]" />
+                                                              </ueabf:AdvancedFilterArgument.Condition1>
+                                                              <ueabf:AdvancedFilterArgument.Condition2>
+                                                                <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                                              </ueabf:AdvancedFilterArgument.Condition2>
+                                                            </ueabf:AdvancedFilterArgument>
+                                                          </ueabf:FilterArgument.AdvancedFiltersArgument>
+                                                          <ueabf:FilterArgument.BasicFiltersArgument>
+                                                            <ueabf:BasicFilterArgument>
+                                                              <ueabf:BasicFilterArgument.BasicFilters>
+                                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                                                  <x:Null />
+                                                                </scg:List>
+                                                              </ueabf:BasicFilterArgument.BasicFilters>
+                                                            </ueabf:BasicFilterArgument>
+                                                          </ueabf:FilterArgument.BasicFiltersArgument>
+                                                        </ueabf:FilterArgument>
+                                                      </ueab:FilterX.FilterArgument>
+                                                    </ueab:FilterX>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ueab:ExcelApplicationCard.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ueab:ExcelApplicationCard>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ueab:ExcelProcessScopeX.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:ExcelProcessScopeX>
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1001,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                              <uix:NClick ClickType="Single" DisplayName="Click 'Button Atrás (F3)'" sap:VirtualizedContainerService.HintSize="1001,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V1">
+                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="845,25" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                              <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="845,133" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="excel.exe" />
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Button Atrás (F3)'" sap:VirtualizedContainerService.HintSize="845,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ed25b0d-935c-41ea-a807-57d6f6566657" Version="V1">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable DesignTimeRectangle="113, 50, 22, 22" ElementType="Button" FriendlyName="'Button Atrás (F3)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[3]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[3]' /&gt;" Guid="66ac1ef7-be03-4b25-8962-8d9e27d47473" InformativeScreenshot="261f02d68294efcdf0515bf1f36d0a8a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Generación de Comprobantes de Retención (SRI)' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                 </uix:NClick.Target>
@@ -774,5 +793,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1195,133" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="saplogon.exe" />
   </Sequence>
 </Activity>
