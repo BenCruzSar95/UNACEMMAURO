@@ -1,0 +1,294 @@
+Sub residuo()
+
+    Workbooks(1).Sheets(1).Activate
+    Range("E1").Select
+    Selection.AutoFilter
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    ActiveSheet.Range("A1:BD" & ultimafila).AutoFilter Field:=5, Criteria1:= _
+        "=RESIDUO*", Operator:=xlAnd
+    Range("M1").Select
+    Dim celda As Range
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    For Each celda In Range("M1:M" & ultimafila)
+        If celda.EntireRow.Hidden = False And celda.Value <> "Peso Seco" Then
+            celda.Value = "9400"
+            celda.Offset(0, 2).Value = "9400"
+            celda.Offset(0, 23).Value = celda.Offset(0, 23).Value * celda.Offset(0, 2).Value
+
+        End If
+    Next celda
+    
+    Range("E1").Select
+    Selection.AutoFilter
+End Sub
+
+Sub cruce(ZMM As String)
+
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
+    
+    
+    'Abrimos el archivo Diario de ZSD003
+    Workbooks.Open Filename:=ZMM
+
+    Workbooks(1).Sheets("Datos SAP").Activate
+    Cells.Select
+    Selection.Delete Shift:=xlUp
+    Range("A1").Select
+
+    Workbooks(2).Sheets(1).Activate
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Cells.Copy
+
+    Workbooks(1).Sheets("Datos SAP").Activate
+    Range("A1").PasteSpecial
+
+
+
+    'Formula Columna BE "Mes"
+    Workbooks(1).Sheets("Datos SAP").Activate
+    Range("BE1").Select
+    Range("BE1").Value = "Mes"
+    Range("BE2").Select
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    ActiveCell.FormulaR1C1 = "=TEXT(RC[-56],""MM MMMM"")"
+    Range("BE2").Select
+    Selection.AutoFill Destination:=Range("BE2:BE"&ultimafila)
+    Range("BE2:BE"&ultimafila).Select
+   
+    'Formula Columna BF "Tn seco_prom"
+    Range("BF1").Select
+    Range("BF1").Value = "Tn seco_prom"
+    Range("BF2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-43]/1000"
+    Range("BF2").Select
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Selection.AutoFill Destination:=Range("BF2:BF"& ultimafila)
+    Range("BF2:BF" & ultimafila).Select
+    
+    'Formula Columna BG "Tn Seco"
+    Range("BG1").Select
+    Range("BG1").Value = "Tn seco"
+    Range("BG2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-46]/1000"
+    Range("BG2").Select
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Selection.AutoFill Destination:=Range("BG2:BG" & ultimafila)
+    Range("BG2:BG" & ultimafila).Select
+    
+    'Formula Columna BH "Tn Humedo"
+    Range("BH1").Select
+    Range("BH1").Value = "Tn Húmedo"
+    Range("BH2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-48]/1000"
+    Range("BH2").Select
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Selection.AutoFill Destination:=Range("BH2:BH" & ultimafila)
+    Range("BH2:BH" & ultimafila).Select
+    
+    'Formula Columna BI "Codigo SAP Propietario"
+    Range("BI1").Select
+    ActiveCell.FormulaR1C1 = "Codigo SAP Propietario"
+    Range("BI2").Select
+    ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-52],'cod SAP'!R1C[-59]:R937C[-48],11,0)"
+    Range("BI2").Select
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Selection.AutoFill Destination:=Range("BI2:BI" & ultimafila)
+    Range("BI2:BI" & ultimafila).Select
+
+    'Formula Columna BJ "Nombre Propietario"
+    Range("BJ1").Select
+    ActiveCell.FormulaR1C1 = "Nombre Propietario"
+    Range("BJ2").Select
+    ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-53],'cod SAP'!R1C[-60]:R937C[-49],12,0)"
+    Range("BJ2").Select
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Selection.AutoFill Destination:=Range("BJ2:BJ" & ultimafila)
+    Range("BJ2:BJ" & ultimafila).Select
+    Range("BI1").Select
+
+   'Formula Columna AJ "Flete"
+    'Range("AJ2").Select
+    'ActiveCell.FormulaR1C1 = "=RC[-1]*9400"
+    'Range("AJ2").Select
+    'ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    'Selection.AutoFill Destination:=Range("AJ2:AJ" & ultimafila)
+    'Range("AJ2:AJ" & ultimafila).Select
+    'Range("AJ1").Select
+
+    'Eliminar los registros sin PRO columna C
+
+    Dim celda As Range
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+
+    For i = 0 To 10
+        For Each celda In Range("C2:C" & ultimafila)
+            If celda = "" Then
+               celda.EntireRow.Delete
+            End If
+        Next celda
+    Next i
+
+
+        'Guardamos los cambios en el archivo 2
+    Workbooks(2).Save
+    Workbooks(2).Close True
+    
+    Application.ScreenUpdating = True
+    Application.DisplayAlerts = True
+    
+End Sub
+
+Sub tonelada()
+
+
+    Workbooks(1).Sheets("Datos SAP").Activate
+    Range("BE1:BJ1").Select
+    Range("BJ1").Activate
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent2
+        .TintAndShade = 0.399975585192419
+        .PatternTintAndShade = 0
+    End With
+    Range("BE1").Select
+    Range("BE1:BJ1").Select
+    Range("BH1").Activate
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    Range("BE1").Select
+    
+
+    Workbooks(1).Sheets("Datos SAP").Activate
+    Range("E1").Select
+    Selection.AutoFilter
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    ActiveSheet.Range("A1:BC" & ultimafila).AutoFilter Field:=5, Criteria1:= _
+        "=RESIDUO*", Operator:=xlAnd
+    Range("M1").Select
+    Dim celda As Range
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    For Each celda In Range("M1:M" & ultimafila)
+        If celda.EntireRow.Hidden = False And celda.Value <> "Peso Seco" Then
+            'celda.Value = "9400"
+            celda.Offset(0, 45).Select
+            celda.Offset(0, 45).Value = "9400"
+            celda.Offset(0, 46).Value = "9400"
+            'celda.Offset(0, 23).Value = celda.Offset(0, 22).Value * celda.Offset(0, 2).Value
+
+   	   'Formula Columna AJ "Flete"
+           'Range("AJ2").Select
+           celda.Offset(0,23).FormulaR1C1 = "=RC[-1]*9400"
+           'Range("AJ2").Select
+           'ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+           'Selection.AutoFill Destination:=Range("AJ2:AJ" & ultimafila)
+           'Range("AJ2:AJ" & ultimafila).Select
+           'Range("AJ1").Select
+
+        End If
+    Next celda
+    
+    Range("E1").Select
+    Selection.AutoFilter
+    
+    
+End Sub
+
+
+
+Sub web(web As String)
+
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
+    
+    
+    'Abrimos el archivo Diario de ZMM023
+    Workbooks.Open Filename:=web
+    
+    Workbooks(1).Sheets("Datos SAP").Activate
+    Cells.Select
+    Selection.Copy
+    Workbooks(2).Sheets(1).Activate
+    Range("A1").Select
+    Workbooks(2).Sheets(1).Paste
+
+    Cells.Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("BG2").Select
+    Application.CutCopyMode = False
+
+    
+    
+        Workbooks(2).Save
+    Workbooks(2).Close True
+    
+    Application.ScreenUpdating = True
+    Application.DisplayAlerts = True
+End Sub
+
+Sub formato()
+
+    'Range("A1").Select
+    'ActiveCell.FormulaR1C1 = "7:50:29 AM"
+    Range("A1").Select
+    ActiveWorkbook.SaveAs Filename:= _
+        "C:\Users\rpaeyuser\Documents\UiPath\Robot Facturación Materia Prima\Config\Descarga mensual\ZMM023WEB.xls" _
+        , FileFormat:=xlExcel8, Password:="", WriteResPassword:="", _
+        ReadOnlyRecommended:=False, CreateBackup:=False
+End Sub
