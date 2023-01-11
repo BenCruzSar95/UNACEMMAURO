@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1488,4776" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1488,4651" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -83,7 +83,7 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Process" sap:VirtualizedContainerService.HintSize="658,4711" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Process" sap:VirtualizedContainerService.HintSize="658,4586" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="contador" />
       <Variable x:TypeArguments="x:Boolean" Name="ExisteArchivoZSD003" />
@@ -147,7 +147,7 @@
       </ui:InvokeWorkflowFile>
     </Sequence>
     <ui:Comment sap:VirtualizedContainerService.HintSize="596,75" sap2010:WorkflowViewState.IdRef="Comment_6" Text="//Lectura de los excelees de Día Feriado y Día Ejecución y la fecha a dia vencido" />
-    <Sequence DisplayName="Excel día Feriado y Día de Ejecución" sap:VirtualizedContainerService.HintSize="596,445" sap2010:WorkflowViewState.IdRef="Sequence_24">
+    <Sequence DisplayName="Excel día Feriado y Día de Ejecución" sap:VirtualizedContainerService.HintSize="596,320" sap2010:WorkflowViewState.IdRef="Sequence_24">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -157,30 +157,14 @@
       <ui:Comment sap:VirtualizedContainerService.HintSize="338,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// Fecha de dia actual y dia vencido" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke FechaDiaAnterior workflow" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="FechaDiaAnterior.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_strDiaFeriado">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strDiaFeriadoExcel" />
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_DiaVencido">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strFechaDiaVencido" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_DiaActual">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strFechaDiaActual" />
-          </OutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_strDiaEjecucion">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strDiaEjecucionExcel" />
-          </InArgument>
-          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_contador">
-            <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="contador" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_FechaDiaActualExcel">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_FechaDiaActual" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_contadorquincenal">
-            <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="contadorquincenal" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_FechaSeisDias">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FechaSeisDias" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strDiaFeriado">[strDiaFeriadoExcel]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_DiaVencido">[strFechaDiaVencido]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_DiaActual">[strFechaDiaActual]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strDiaEjecucion">[strDiaEjecucionExcel]</InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_contador">[contador]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_FechaDiaActualExcel">[str_FechaDiaActual]</OutArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_contadorquincenal">[contadorquincenal]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_FechaSeisDias">[FechaSeisDias]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -189,7 +173,6 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[str_FechaDiaActual + strFechaDiaActual]" />
     </Sequence>
     <ui:Comment sap:VirtualizedContainerService.HintSize="596,75" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Cerramos las aplicaciones Excel, Chrome y SAP" />
     <Sequence DisplayName="Cerramos las aplicaciones" sap:VirtualizedContainerService.HintSize="596,224" sap2010:WorkflowViewState.IdRef="Sequence_25">
@@ -235,15 +218,9 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción VI04 workflow" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Transacción VI04.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_DiaVencido">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strFechaDiaVencido" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_FechaActual">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FechaDiaActual" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_FechaSeisDias">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FechaSeisDias" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_DiaVencido">[strFechaDiaVencido]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_FechaActual">[str_FechaDiaActual]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_FechaSeisDias">[FechaSeisDias]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -254,18 +231,10 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZSD003 workflow" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Transacción ZSD003.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_strRutaExcelDaiario">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strRutaExcelDiario" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_strFechaDiaActual">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FechaDiaActual" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_strFechaDiaAnterior">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strFechaDiaVencido" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_strFechaSeisDias">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FechaSeisDias" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strRutaExcelDaiario">[strRutaExcelDiario]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strFechaDiaActual">[str_FechaDiaActual]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strFechaDiaAnterior">[strFechaDiaVencido]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strFechaSeisDias">[FechaSeisDias]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
