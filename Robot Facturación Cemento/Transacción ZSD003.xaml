@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,5756</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,5796</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZSD003_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -87,8 +87,8 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Transacción_ZSD003" sap:VirtualizedContainerService.HintSize="496,5691" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -196,7 +196,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Fecha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="e09b0052-080c-44c8-90ba-4ec3d7e15bf4" Text="[in_strFechaDiaActual.Replace(&quot;_&quot;,&quot;.&quot;)]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Fecha Pedido seis dias antes" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="e09b0052-080c-44c8-90ba-4ec3d7e15bf4" Text="[in_strFechaSeisDias]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable ContentHash="Ri-3eMSIqkKZZJqOvrak1A" DesignTimeRectangle="263, 401, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtS_WADAT1-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_WADAT1-LOW' /&gt;" Guid="3474b706-cac2-4f76-bbf8-0aa0b927a003" InformativeScreenshot="f134756b862e760d1216f069fda2b660.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/szTMCLuGE0-7nVgR5y_82Q" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de Despacho' /&gt;" SearchSteps="Selector" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -205,7 +205,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Fecha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="e09b0052-080c-44c8-90ba-4ec3d7e15bf4" Text="[in_strFechaSeisDias]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Fecha  Pedido dia actual " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="e09b0052-080c-44c8-90ba-4ec3d7e15bf4" Text="[in_strFechaDiaActual.Replace(&quot;_&quot;,&quot;.&quot;)]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable ContentHash="4GEvGV4HzE65qASxnsbLvw" DesignTimeRectangle="438, 401, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtS_WADAT1-HIGH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_WADAT1-HIGH' /&gt;" Guid="ebe5d250-04f5-4c94-9aa1-64e563c1bef9" InformativeScreenshot="981cbb77cdff31e0f963bcbc63df2d6d.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/m8H-jfSCvkGpLiDZ5qmi2A" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de Despacho' /&gt;" SearchSteps="Selector" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
