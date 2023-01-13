@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1979,8767</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2131,13321</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZMM023_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -124,7 +124,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Transacción_ZMM023" sap:VirtualizedContainerService.HintSize="1989,8702" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZMM023" sap:VirtualizedContainerService.HintSize="2141,13256" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ControlCalidad" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataPedidoSAP" />
@@ -136,18 +136,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="1927,81" sap2010:WorkflowViewState.IdRef="Sequence_63">
+    <Sequence sap:VirtualizedContainerService.HintSize="2079,4335" sap2010:WorkflowViewState.IdRef="Sequence_63">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="434,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//Inicio de la transacción ZMM023" />
-      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
-      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SAP Front End\SAP Logon.lnk" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" Timeout="6000" />
-      <ucas:Logon Window="{x:Null}" ConnectionName="PRD_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
-      <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="434,364" sap2010:WorkflowViewState.IdRef="Login_1" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="%r9a_3Act89_%" Timeout="5000" Username="RPA_FACT">
+      <ui:Comment sap:VirtualizedContainerService.HintSize="434,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//Inicio de la transacción ZMM023" />
+      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
+      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SAP Front End\SAP Logon.lnk" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" Timeout="6000" />
+      <ucas:Logon Window="{x:Null}" ConnectionName="PRD_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
+      <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="434,365" sap2010:WorkflowViewState.IdRef="Login_1" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="%r9a_3Act89_%" Timeout="5000" Username="RPA_FACT">
         <ucas:Login.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b3b9596-8817-4ab8-a37c-fc2c13a4fdd3" InformativeScreenshot="321be60d64e7b4b4c995343cc475823f" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
             <ui:Target.TimeoutMS>
@@ -159,7 +159,7 @@
           </ui:Target>
         </ucas:Login.Target>
       </ucas:Login>
-      <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="ZMM023">
+      <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="ZMM023">
         <ucas:CallTransaction.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5667060b-d3bb-492f-972f-da58e02ac0fc" InformativeScreenshot="b507edc0b2d7bc3af5c95817f2133de3" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
             <ui:Target.TimeoutMS>
@@ -171,34 +171,34 @@
           </ui:Target>
         </ucas:CallTransaction.Target>
       </ucas:CallTransaction>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="434,1367" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V2">
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="434,1393" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1078" sap2010:WorkflowViewState.IdRef="Sequence_38">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1103" sap2010:WorkflowViewState.IdRef="Sequence_38">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'EC01'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="UE01" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'EC01'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="UE01" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 181, 34, 20" ElementType="Text" FriendlyName="'06.0'" FullSelectorArgument="&lt;sap id='usr/ctxtP_WERKS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtP_WERKS' check:text='06.0' /&gt;" Guid="5541f31e-7c31-44ea-aaf4-855e2940b1c9" InformativeScreenshot="b07e724471fd10bad8b088f9c37d55e0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into '22.07.2022'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="[in_strCincoDiasBot]" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into '22.07.2022'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="[in_strCincoDiasBot]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 313, 76, 20" ElementType="InputBox" FriendlyName="'22.07.2022'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FCTCK-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FCTCK-LOW' /&gt;" Guid="ac47df7c-8394-425e-bbff-7f0fc80db6f7" InformativeScreenshot="63facad57b3033b24e9b54eab80c4d79.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Fecha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="[in_strDiaAnteriorBot]" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Fecha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="[in_strDiaAnteriorBot]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="438, 313, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtS_FCTCK-HIGH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_FCTCK-HIGH' /&gt;" Guid="e8b40bb4-1f3a-4fc5-a378-3cda50471f57" InformativeScreenshot="f3a690d88956f4881447ffe899f44335.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Estado'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="REG" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'CTextField Estado'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="REG" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="263, 357, 27, 20" ElementType="InputBox" FriendlyName="'CTextField Estado'" FullSelectorArgument="&lt;sap id='usr/ctxtS_STTCK-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtS_STTCK-LOW' /&gt;" Guid="63a39287-ab87-45dd-812f-92853104fd05" InformativeScreenshot="a9284bfd9a3eb5bcb3141f173acab80e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
@@ -216,7 +216,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2" DelayBefore="5" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Ejecutar   (F8)">
+      <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2" DelayBefore="5" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Ejecutar   (F8)">
         <ucas:SelectMenuItem.Items>
           <scg:List x:TypeArguments="x:String" Capacity="4">
             <x:String xml:space="preserve">Ejecutar   (F8)</x:String>
@@ -240,24 +240,24 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ucas:SelectMenuItem>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="434,735" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V2">
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="434,759" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,469" sap2010:WorkflowViewState.IdRef="Sequence_42">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ClickType="Single" DisplayName="Click 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="26, 161, 23, 19" FriendlyName="'SAPGUI.GridViewCtrl.1'" FullSelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' tableCol='-1' tableRow='-1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="46f414d9-f9c7-4446-93ce-4b1da31094ee" InformativeScreenshot="fa62e4c38602583b6056e7212d13aff9.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Obt. Análisis'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'Obt. Análisis'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="835, 123, 100, 20" ElementType="Button" FriendlyName="'Obt. Análisis'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[18]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[18]' check:text='Obt. Análisis' /&gt;" Guid="a9b54ef6-9aac-458e-9d96-fd49e4b362be" InformativeScreenshot="1e63f6818011f7acf5e44f018617bada.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -275,19 +275,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="434,589" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" ScopeGuid="7f1d5a37-43c7-4a3f-898f-09dee5309cfe" Version="V2">
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="434,612" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" ScopeGuid="7f1d5a37-43c7-4a3f-898f-09dee5309cfe" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_43">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,322" sap2010:WorkflowViewState.IdRef="Sequence_43">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'El estado'" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="7f1d5a37-43c7-4a3f-898f-09dee5309cfe" Version="V1">
+              <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'El estado'" sap:VirtualizedContainerService.HintSize="338,207" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="7f1d5a37-43c7-4a3f-898f-09dee5309cfe" Version="V1">
                 <uix:NGetAttribute.Result>
                   <OutArgument x:TypeArguments="x:String">[ControlCalidad]</OutArgument>
                 </uix:NGetAttribute.Result>
@@ -309,7 +309,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
-    <If Condition="[ControlCalidad.Contains(&quot;Exitosamente&quot;)]" sap:VirtualizedContainerService.HintSize="1927,8470" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[ControlCalidad.Contains(&quot;Exitosamente&quot;)]" sap:VirtualizedContainerService.HintSize="2079,8770" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -317,20 +317,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="1482,8311" sap2010:WorkflowViewState.IdRef="Sequence_52">
+        <Sequence sap:VirtualizedContainerService.HintSize="1634,8611" sap2010:WorkflowViewState.IdRef="Sequence_52">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="1420,2328" sap2010:WorkflowViewState.IdRef="Sequence_51">
+          <Sequence sap:VirtualizedContainerService.HintSize="1572,2360" sap2010:WorkflowViewState.IdRef="Sequence_51">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button Hoja'" sap:VirtualizedContainerService.HintSize="548,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_4" Item="Hoja de cálculo...   (Ctrl+Shift+F7)">
+            <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button Hoja'" sap:VirtualizedContainerService.HintSize="568,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_4" Item="Hoja de cálculo...   (Ctrl+Shift+F7)">
               <ucas:SelectMenuItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="32">
                   <x:String xml:space="preserve">Detalles   (Ctrl+Shift+F3)</x:String>
@@ -374,7 +374,7 @@
                 </ui:Target>
               </ucas:SelectMenuItem.Target>
             </ucas:SelectMenuItem>
-            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Click Toolbar Button 'Button Continuar'" sap:VirtualizedContainerService.HintSize="548,159" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continuar   (Intro)">
+            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Click Toolbar Button 'Button Continuar'" sap:VirtualizedContainerService.HintSize="568,160" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continuar   (Intro)">
               <ucas:ClickToolbarButton.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String xml:space="preserve">Continuar   (Intro)</x:String>
@@ -392,21 +392,21 @@
                 </ui:Target>
               </ucas:ClickToolbarButton.Target>
             </ucas:ClickToolbarButton>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="548,1818" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="568,1849" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="514,1529" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534,1559" sap2010:WorkflowViewState.IdRef="Sequence_53">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="472,493" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="472,495" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                       <TryCatch.Try>
-                        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Config\Descargas\ZMM023.XLSX" />
+                        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Config\Descargas\ZMM023.XLSX" />
                       </TryCatch.Try>
                       <TryCatch.Catches>
                         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,104" sap2010:WorkflowViewState.IdRef="Catch`1_1">
@@ -424,23 +424,23 @@
                         </Catch>
                       </TryCatch.Catches>
                     </TryCatch>
-                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="472,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="4" DelayBefore="2" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="472,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Text="[strExcelZMM023]" Version="V1">
+                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="472,25" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="4" DelayBefore="2" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="472,217" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Text="[strExcelZMM023]" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="87, 32, 370, 20" ElementType="InputBox" FriendlyName="'C:\\TEMP'" FullSelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" Guid="1c4c4f38-50e4-4b5f-91fb-b6973c7ae80a" InformativeScreenshot="e6c23332589917ad3756597c1dd4e1c8.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Entrada de Mercancía por Compra/Traslado' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'EXPORT.XLSX'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="472,216" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Text="ZMM023.XLSX" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into 'EXPORT.XLSX'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="472,217" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Text="ZMM023.XLSX" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="87, 54, 370, 20" ElementType="InputBox" FriendlyName="'EXPORT.XLSX'" FullSelectorArgument="&lt;sap id='usr/ctxtDY_FILENAME' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_FILENAME' /&gt;" Guid="4de8cac4-b6c2-4be6-bc9e-115c35667f05" InformativeScreenshot="a96309d505aad62cec73aedb93fa7540.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Entrada de Mercancía por Compra/Traslado' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ClickType="Single" DelayAfter="20" DelayBefore="2" DisplayName="Click 'Crear'" sap:VirtualizedContainerService.HintSize="472,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Version="V1">
+                    <uix:NClick ClickType="Single" DelayAfter="20" DelayBefore="2" DisplayName="Click 'Crear'" sap:VirtualizedContainerService.HintSize="472,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="306, 91, 42, 20" ElementType="Button" FriendlyName="'Crear'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' check:text='Crear' /&gt;" Guid="ecb41751-f882-434f-8d37-8733e6d496d9" InformativeScreenshot="aab50c0b297f669c4b6113d5cf5db07f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Entrada de Mercancía por Compra/Traslado' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="472,132" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="excel.exe" />
+                    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="472,133" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="excel.exe" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
@@ -455,20 +455,20 @@
               </sap:WorkflowViewStateService.ViewState>
             </uix:NApplicationCard>
           </Sequence>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="1420,74" sap2010:WorkflowViewState.IdRef="Comment_2" Text="//Validación del archivo ZMM023 con las tolerancias de la húmedad" />
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1420,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="1572,75" sap2010:WorkflowViewState.IdRef="Comment_2" Text="//Validación del archivo ZMM023 con las tolerancias de la húmedad" />
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1572,309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,199" sap2010:WorkflowViewState.IdRef="Sequence_55">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\humedad.txt" DisplayName="Invoke VBA" EntryMethodName="humedad" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
+                  <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\humedad.txt" DisplayName="Invoke VBA" EntryMethodName="humedad" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
                 </Sequence>
               </ActivityAction>
             </ui:ExcelApplicationScope.Body>
@@ -479,16 +479,16 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExcelApplicationScope>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="1420,55" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Leemos la hoja1 del archivo de Pedido SAP" />
-          <ui:ReadRange AddHeaders="True" DataTable="[DataPedidoSAP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1420,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Hoja1" WorkbookPath="[strPedidoSAP]">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="1572,56" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Leemos la hoja1 del archivo de Pedido SAP" />
+          <ui:ReadRange AddHeaders="True" DataTable="[DataPedidoSAP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1572,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Hoja1" WorkbookPath="[strPedidoSAP]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="1420,55" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Iniciamos un contador desde 0" />
-          <Assign sap:VirtualizedContainerService.HintSize="1420,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="1572,56" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Iniciamos un contador desde 0" />
+          <Assign sap:VirtualizedContainerService.HintSize="1572,61" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
             </Assign.To>
@@ -496,28 +496,28 @@
               <InArgument x:TypeArguments="x:Int32">0</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="1420,74" sap2010:WorkflowViewState.IdRef="Comment_5" Text="//Hacemos  un loop para contar los registros fuera de rango" />
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPedidoSAP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1420,546" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="1572,75" sap2010:WorkflowViewState.IdRef="Comment_5" Text="//Hacemos  un loop para contar los registros fuera de rango" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPedidoSAP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1572,587" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,431" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="546,471" sap2010:WorkflowViewState.IdRef="Sequence_71">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[row(9).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="484,339" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If Condition="[row(9).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="484,360" sap2010:WorkflowViewState.IdRef="If_4">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_72">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
                           </Assign.To>
@@ -538,8 +538,8 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="1420,74" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// Si el contador es 0 sigue el proceso, si es más de 0 se envía un correo de  incidencia" />
-          <If Condition="[contador.Equals(0)]" sap:VirtualizedContainerService.HintSize="1420,4159" sap2010:WorkflowViewState.IdRef="If_5">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="1572,75" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// Si el contador es 0 sigue el proceso, si es más de 0 se envía un correo de  incidencia" />
+          <If Condition="[contador.Equals(0)]" sap:VirtualizedContainerService.HintSize="1572,4358" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -547,7 +547,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="999,4001" sap2010:WorkflowViewState.IdRef="Sequence_74">
+              <Sequence sap:VirtualizedContainerService.HintSize="1127,4199" sap2010:WorkflowViewState.IdRef="Sequence_74">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="DataPesaje" />
                 </Sequence.Variables>
@@ -556,20 +556,20 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="957,93" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// Continuamos con el proceso y ejecutamos la macro correspondiente a los pesajes del transporte" />
-                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="957,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="1065,94" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// Continuamos con el proceso y ejecutamos la macro correspondiente a los pesajes del transporte" />
+                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1065,309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
                   <ui:ExcelApplicationScope.Body>
                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,199" sap2010:WorkflowViewState.IdRef="Sequence_76">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\pesaje.txt" DisplayName="Invoke VBA" EntryMethodName="pesaje" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" />
+                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\pesaje.txt" DisplayName="Invoke VBA" EntryMethodName="pesaje" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" />
                       </Sequence>
                     </ActivityAction>
                   </ui:ExcelApplicationScope.Body>
@@ -580,16 +580,16 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ExcelApplicationScope>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="957,55" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// Leemos la hoja 2 del archivo de PedidoSAP" />
-                <ui:ReadRange AddHeaders="True" DataTable="[DataPesaje]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="957,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Hoja2" WorkbookPath="[strPedidoSAP]">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="1065,56" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// Leemos la hoja 2 del archivo de PedidoSAP" />
+                <ui:ReadRange AddHeaders="True" DataTable="[DataPesaje]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1065,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Hoja2" WorkbookPath="[strPedidoSAP]">
                   <ui:ReadRange.Range>
                     <InArgument x:TypeArguments="x:String">
                       <Literal x:TypeArguments="x:String" Value="" />
                     </InArgument>
                   </ui:ReadRange.Range>
                 </ui:ReadRange>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="957,55" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Iniciamos un contador 2 en 0" />
-                <Assign sap:VirtualizedContainerService.HintSize="957,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="1065,56" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Iniciamos un contador 2 en 0" />
+                <Assign sap:VirtualizedContainerService.HintSize="1065,61" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[contadordos]</OutArgument>
                   </Assign.To>
@@ -597,28 +597,28 @@
                     <InArgument x:TypeArguments="x:Int32">0</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="957,55" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Iniciamos un contador 2 en 0" />
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPesaje]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="957,546" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="1065,56" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Iniciamos un contador 2 en 0" />
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPesaje]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1065,587" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,431" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="546,471" sap2010:WorkflowViewState.IdRef="Sequence_79">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[row(4).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="484,339" sap2010:WorkflowViewState.IdRef="If_6">
+                        <If Condition="[row(4).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="484,360" sap2010:WorkflowViewState.IdRef="If_6">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                            <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_78">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[contadordos]</OutArgument>
                                 </Assign.To>
@@ -639,36 +639,36 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ForEachRow>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="957,93" sap2010:WorkflowViewState.IdRef="Comment_12" Text="//Si el contador dos es igual a cero seguimos con el proceso, si el contadordos es diferente de cero se envía un correo" />
-                <If Condition="[contadordos.Equals(0)]" sap:VirtualizedContainerService.HintSize="957,2217" sap2010:WorkflowViewState.IdRef="If_7">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="1065,94" sap2010:WorkflowViewState.IdRef="Comment_12" Text="//Si el contador dos es igual a cero seguimos con el proceso, si el contadordos es diferente de cero se envía un correo" />
+                <If Condition="[contadordos.Equals(0)]" sap:VirtualizedContainerService.HintSize="1065,2327" sap2010:WorkflowViewState.IdRef="If_7">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="536,2059" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                    <Sequence sap:VirtualizedContainerService.HintSize="620,2168" sap2010:WorkflowViewState.IdRef="Sequence_80">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Comment sap:VirtualizedContainerService.HintSize="494,55" sap2010:WorkflowViewState.IdRef="Comment_14" Text="// Continuamos con el proceso " />
-                      <Sequence sap:VirtualizedContainerService.HintSize="494,1872" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="558,56" sap2010:WorkflowViewState.IdRef="Comment_14" Text="// Continuamos con el proceso " />
+                      <Sequence sap:VirtualizedContainerService.HintSize="558,1961" sap2010:WorkflowViewState.IdRef="Sequence_22">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="452,539" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="86c80744-471c-497f-96ef-c9627679587a" Version="V2">
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="496,562" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="86c80744-471c-497f-96ef-c9627679587a" Version="V2">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ClickType="Single" DisplayName="Click 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="86c80744-471c-497f-96ef-c9627679587a" Version="V1">
+                                <uix:NClick ClickType="Single" DisplayName="Click 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="86c80744-471c-497f-96ef-c9627679587a" Version="V1">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable DesignTimeRectangle="26, 161, 23, 19" FriendlyName="'SAPGUI.GridViewCtrl.1'" FullSelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' tableCol='-1' tableRow='-1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="9fbf648d-de04-45c9-b07c-d18421ecfe4c" InformativeScreenshot="d3f282a3de9c0d9f374aa052bb35e6c8.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                   </uix:NClick.Target>
@@ -686,7 +686,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NApplicationCard>
-                        <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Button  Revisión'" sap:VirtualizedContainerService.HintSize="452,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Revisar   (F9)">
+                        <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Button  Revisión'" sap:VirtualizedContainerService.HintSize="496,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Revisar   (F9)">
                           <ucas:SelectMenuItem.Items>
                             <scg:List x:TypeArguments="x:String" Capacity="32">
                               <x:String xml:space="preserve">Detalles   (Ctrl+Shift+F3)</x:String>
@@ -736,25 +736,25 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ucas:SelectMenuItem>
-                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Confirmación de Revisión." sap:VirtualizedContainerService.HintSize="452,633" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V2">
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Confirmación de Revisión." sap:VirtualizedContainerService.HintSize="496,677" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V2">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                               </ActivityAction.Argument>
-                              <Sequence sap:VirtualizedContainerService.HintSize="418,344" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                              <Sequence sap:VirtualizedContainerService.HintSize="462,387" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ClickType="Single" DisplayName="Click 'Si'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V1">
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Si'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V1">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="38, 119, 104, 22" ElementType="Button" FriendlyName="'Si'" FullSelectorArgument="&lt;sap id='usr/btnBUTTON_1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnBUTTON_1' check:text='Si' /&gt;" Guid="93ebcb29-d57f-4172-bc27-794892f77c88" InformativeScreenshot="3d1e60db0461503610116e85a66335a0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Confirmación de Revisión.' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                     </uix:NClick.Target>
@@ -773,13 +773,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NApplicationCard>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZMM023 Material a Material workflow" sap:VirtualizedContainerService.HintSize="452,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Transacción ZMM023 Material a Material.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZMM023 Material a Material workflow" sap:VirtualizedContainerService.HintSize="496,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Transacción ZMM023 Material a Material.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_strDiaAnteriorBot">[in_strDiaAnteriorBot]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_strCincoDiasBor">[in_strCincoDiasBot]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas  diaria ha finalizado con éxito.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima." To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com">
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas  diaria ha finalizado con éxito.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="496,178" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima." To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                           </ui:SendMail.Files>
@@ -788,14 +788,14 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="376,398" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                    <Sequence sap:VirtualizedContainerService.HintSize="400,419" sap2010:WorkflowViewState.IdRef="Sequence_81">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_13" Text="// Se envia correo por incidencia de pesaje fuera de rango" />
-                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que el pesaje del transporte esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com">
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="338,75" sap2010:WorkflowViewState.IdRef="Comment_13" Text="// Se envia correo por incidencia de pesaje fuera de rango" />
+                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que el pesaje del transporte esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="338,193" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;javier.revelo@unacem.ec;cristina.flores@unacem.ec">
                         <ui:SendMail.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                             <InArgument x:TypeArguments="x:String">[strPedidoSAP]</InArgument>
@@ -808,15 +808,15 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,398" sap2010:WorkflowViewState.IdRef="Sequence_75">
+              <Sequence sap:VirtualizedContainerService.HintSize="400,419" sap2010:WorkflowViewState.IdRef="Sequence_75">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// Se manda correo de incidencia con el archivo de Pedido SAP" />
-                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que la humedad esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="338,75" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// Se manda correo de incidencia con el archivo de Pedido SAP" />
+                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que la humedad esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="338,193" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
                   <ui:SendMail.Files>
                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                       <InArgument x:TypeArguments="x:String">[strPedidoSAP]</InArgument>
@@ -829,7 +829,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,289" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <Sequence sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_23">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="SetPassword" />
           </Sequence.Variables>
