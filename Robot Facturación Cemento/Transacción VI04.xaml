@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1104,3059</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3061</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_VI04_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
@@ -86,7 +86,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_VI04" sap:VirtualizedContainerService.HintSize="496,2994" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_VI04" sap:VirtualizedContainerService.HintSize="496,2996" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFechaDiaAnterior" />
       <Variable x:TypeArguments="x:String" Name="strFechaActual" />
@@ -123,13 +123,13 @@
         </ui:Target>
       </ucas:CallTransaction.Target>
     </ucas:CallTransaction>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Lista transportes: Crear gastos transporte" sap:VirtualizedContainerService.HintSize="434,1134" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Lista transportes: Crear gastos transporte" sap:VirtualizedContainerService.HintSize="434,1136" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,844" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,846" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,7 +140,7 @@
                 <uix:TargetAnchorable ContentHash="X3zmlNKom0u3P00zAMKmkQ" DesignTimeRectangle="263, 907, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtK_DTABF-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtK_DTABF-LOW' /&gt;" Guid="ca30c3a9-52c1-415b-b717-4c92865313d5" InformativeScreenshot="666bd419ed99fc99ba64d80518c8d2bf.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/6rha2iW1nkO5pcin5ZhZKg" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'FechaActual'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Text="[in_FechaActual.Replace(&quot;_&quot;,&quot;.&quot;)]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'FechaDiaAnterior'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Text="[DateTime.Now.AddDays(-1).ToString.Substring(3,2)+&quot;.&quot;+ DateTime.Now.AddDays(-1).ToString.Substring(0,2) +&quot;.&quot;+ DateTime.Now.AddDays(-1).ToString.Substring(6,4)]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable ContentHash="NOwFGtS9OEaPYHIHMX1lvg" DesignTimeRectangle="438, 907, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtK_DTABF-HIGH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtK_DTABF-HIGH' /&gt;" Guid="c33284a2-5419-429f-8dbb-7b58f27fe36e" InformativeScreenshot="79eafaec644fc278b619b3c945820578.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/7t8M32EopEauWGYqnQfdwg" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NTypeInto.Target>
