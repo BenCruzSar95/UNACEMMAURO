@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZMM023" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZMM023" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="strExcelZMM023" Type="InArgument(x:String)" />
     <x:Property Name="strPedidoSAP" Type="InArgument(x:String)" />
@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,12425.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524.8,7121.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZMM023_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -69,7 +69,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="49">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -119,26 +119,27 @@
       <AssemblyReference>UiPath.SystemCenter</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Transacción_ZMM023" sap:VirtualizedContainerService.HintSize="1283.2,12320.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZMM023" sap:VirtualizedContainerService.HintSize="1535.2,7056.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ControlCalidad" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataPedidoSAP" />
       <Variable x:TypeArguments="x:Int32" Name="contador" />
       <Variable x:TypeArguments="x:Int32" Name="contadordos" />
+      <Variable x:TypeArguments="x:String" Name="EstadoEjecucionMacroHumedad" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="1220.8,4356.8" sap2010:WorkflowViewState.IdRef="Sequence_63">
+    <Sequence sap:VirtualizedContainerService.HintSize="1472.8,4356.8" sap2010:WorkflowViewState.IdRef="Sequence_63">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,7 +312,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
-    <If Condition="[ControlCalidad.Contains(&quot;Exitosamente&quot;)]" sap:VirtualizedContainerService.HintSize="1220.8,7812" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[ControlCalidad.Contains(&quot;Exitosamente&quot;)]" sap:VirtualizedContainerService.HintSize="1472.8,2548" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -319,20 +320,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="745.6,7652.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
+        <Sequence sap:VirtualizedContainerService.HintSize="1011.2,2388.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="683.2,566.4" sap2010:WorkflowViewState.IdRef="Sequence_51">
+          <Sequence sap:VirtualizedContainerService.HintSize="948.8,888" sap2010:WorkflowViewState.IdRef="Sequence_51">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button Hoja'" sap:VirtualizedContainerService.HintSize="414.4,160.8" sap2010:WorkflowViewState.IdRef="SelectMenuItem_4" Item="Hoja de cálculo...   (Ctrl+Shift+F7)">
+            <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button Hoja'" sap:VirtualizedContainerService.HintSize="433.6,160.8" sap2010:WorkflowViewState.IdRef="SelectMenuItem_4" Item="Hoja de cálculo...   (Ctrl+Shift+F7)">
               <ucas:SelectMenuItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="32">
                   <x:String xml:space="preserve">Detalles   (Ctrl+Shift+F3)</x:String>
@@ -376,7 +377,7 @@
                 </ui:Target>
               </ucas:SelectMenuItem.Target>
             </ucas:SelectMenuItem>
-            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Click Toolbar Button 'Button Continuar'" sap:VirtualizedContainerService.HintSize="414.4,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continuar   (Intro)">
+            <ucas:ClickToolbarButton ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Click Toolbar Button 'Button Continuar'" sap:VirtualizedContainerService.HintSize="433.6,160.8" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continuar   (Intro)">
               <ucas:ClickToolbarButton.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String xml:space="preserve">Continuar   (Intro)</x:String>
@@ -394,17 +395,17 @@
                 </ui:Target>
               </ucas:ClickToolbarButton.Target>
             </ucas:ClickToolbarButton>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="414.4,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="433.6,374.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="76ba70fe-69e1-48d0-b190-28d1ceb19d3c" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do Eliminar ZMM023.XLSX" sap:VirtualizedContainerService.HintSize="532.8,1740.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                  <Sequence DisplayName="Do Eliminar ZMM023.XLSX" sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="470.4,672" sap2010:WorkflowViewState.IdRef="TryCatch_1">
@@ -460,27 +461,59 @@
               </uix:NApplicationCard.TargetApp>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NApplicationCard>
           </Sequence>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="683.2,75.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="//Validación del archivo ZMM023 con las tolerancias de la húmedad" />
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="683.2,374.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="948.8,75.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="//Validación del archivo ZMM023 con las tolerancias de la húmedad" />
+          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="948.8,24.8" sap2010:WorkflowViewState.IdRef="Delay_2" />
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="948.8,744.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,264.8" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="915.2,635.2" sap2010:WorkflowViewState.IdRef="Sequence_55">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="337.6,24.8" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                  <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\humedad.txt" DisplayName="Invoke VBA" EntryMethodName="humedad" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="337.6,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
+                  <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Pedido'" sap:VirtualizedContainerService.HintSize="852.8,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="10" Version="V1">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,304.8" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\humedad.txt" DisplayName="Invoke VBA" EntryMethodName="humedad" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="337.6,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
+                        <Assign sap:VirtualizedContainerService.HintSize="337.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EstadoEjecucionMacroHumedad]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Exitoso"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn" Message="[&quot;No se encuentra información en celda F1 de ZMM023&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1111, 268, 108, 88" FriendlyName="'Pedido'" FullSelectorArgument="&lt;uia cls='EXCEL7' name='ZMM023.XLSX' /&gt;&lt;uia name='Cuadrícula' /&gt;&lt;uia name='F1' tableCol='5' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;uia cls='EXCEL7' name='ZMM023.XLSX' /&gt;&lt;uia name='Cuadrícula' /&gt;&lt;uia name='F1' role='' automationid='' check:text='Pedido' /&gt;" Guid="5922eadb-e6ff-422d-93c5-69b4ad26be68" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAABcCAYAAAC2jjEGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJlSURBVHhe7dfbrapAAEBR+rEVSqGI+0sJxm/7oAhrsI25DA8dBlB85MRNNsnKkZGBOPuAsbher+F0OoX4Vwxpr+J4PAZxFU3ThKIoQvwrhrSXAYEMCGdAOAPCbQpYl0U3vuhQhXN2/Du6ayTnyveXbDlm72KD2+t8YNQHLEOdjTdNHcovRXwnhgE/DtiEc3Vo3zuE6jx/7xUGfM/HAZu67OaU9X2sjxrn9A7VeTqn1Z9z0EaoshhLcZ7NibZce0/iZ7y9zgdGjwLmd+DsjjxX4ZAtZH6+26I/CLh5zpNr781nAYcFKsp6sp8vWL/Yw/zhmPSOjRaDjftb5jy89ueP+F/1QsAVY7yoe5wuLFYSYG1Bu/GVgJvmbLj2ZHwnYoPb63xg1AdcfoSm+oVO4mbuAefneh7wyRwDfh5wdRETfYw/vAO7cQO24xsCrnwPTRZ35Y5Ig832t8xZufZa/L34bsBWf2y6YMOP/eS7cnbMcJesBnxlTnrMEHXyPb0zXw8Y9f/1cc5gYQH7c47KUD14hG6dE+XX3vNPiCh+xtvrfEC/z4BwBoQzIJwB4QwIZ0A4A8IZEM6AcAaEMyCcAeEMCGdAOAPCGRDOgHAGhDMgnAHhDAhnQDgDwhkQzoBwBoQzIJwB4QwIZ0A4A8IZEM6AcAaEMyCcAeEMCGdAOAPCGRDOgHAGhDMgnAHhDAhnQDgDwhkQzoBwBoQzIJwB4QwIZ0A4A8IZEM6AcAaEMyCcAeEMCGdAOAPCGRDOgHAGhDMgnAHhDAg3CRh3BBba7XK5hOJfu7PA7fe2Sa/ZQMLtN7d7ryL8B9fABDrPzxXiAAAAAElFTkSuQmCC" InformativeScreenshot="ef51a2f0860464cb7f23650ce5aa3d8b.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ZMM023.XLSX - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
                 </Sequence>
               </ActivityAction>
             </ui:ExcelApplicationScope.Body>
@@ -491,358 +524,392 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExcelApplicationScope>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="683.2,75.2" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Leemos la hoja1 del archivo de Pedido SAP" />
-          <ui:ReadRange AddHeaders="True" DataTable="[DataPedidoSAP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="683.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Hoja1" WorkbookPath="[strPedidoSAP]">
-            <ui:ReadRange.Range>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
-              </InArgument>
-            </ui:ReadRange.Range>
-          </ui:ReadRange>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="683.2,56" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Iniciamos un contador desde 0" />
-          <Assign sap:VirtualizedContainerService.HintSize="683.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:Int32">0</InArgument>
-            </Assign.Value>
-          </Assign>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="683.2,75.2" sap2010:WorkflowViewState.IdRef="Comment_5" Text="//Hacemos  un loop para contar los registros fuera de rango" />
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPedidoSAP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="683.2,588.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-            <ui:ForEachRow.Body>
-              <ActivityAction x:TypeArguments="sd:DataRow">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.6,472.8" sap2010:WorkflowViewState.IdRef="Sequence_71">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[row(9).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,360.8" sap2010:WorkflowViewState.IdRef="If_4">
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_72">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="337.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[contador + 1]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Then>
-                  </If>
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachRow.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:ForEachRow>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="683.2,75.2" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// Si el contador es 0 sigue el proceso, si es más de 0 se envía un correo de  incidencia" />
-          <If Condition="[contador.Equals(0)]" sap:VirtualizedContainerService.HintSize="683.2,242.4" sap2010:WorkflowViewState.IdRef="If_5">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_75">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="338,75" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// Se manda correo de incidencia con el archivo de Pedido SAP" />
-                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que la humedad esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="338,193" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
-                  <ui:SendMail.Files>
-                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                      <InArgument x:TypeArguments="x:String">[strPedidoSAP]</InArgument>
-                    </scg:List>
-                  </ui:SendMail.Files>
-                </ui:SendMail>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Estimados: El  proceso de facturas de materias primas ha finalizado debido a que la humedad esta fuera de rango. Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia.. Saludos.&quot;]" />
-              </Sequence>
-            </If.Else>
-          </If>
-          <Sequence sap:VirtualizedContainerService.HintSize="683.2,4824" sap2010:WorkflowViewState.IdRef="Sequence_74">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Name="DataPesaje" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="620.8,94.4" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// Continuamos con el proceso y ejecutamos la macro correspondiente a los pesajes del transporte" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="620.8,309.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
-              <ui:ExcelApplicationScope.Body>
-                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,200" sap2010:WorkflowViewState.IdRef="Sequence_76">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\pesaje.txt" DisplayName="Invoke VBA" EntryMethodName="pesaje" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="337.6,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ExcelApplicationScope.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:ExcelApplicationScope>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="620.8,75.2" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// Leemos la hoja 2 del archivo de PedidoSAP" />
-            <ui:ReadRange AddHeaders="True" DataTable="[DataPesaje]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="620.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Hoja2" WorkbookPath="[strPedidoSAP]">
-              <ui:ReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ReadRange.Range>
-            </ui:ReadRange>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="620.8,56" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Iniciamos un contador 2 en 0" />
-            <Assign sap:VirtualizedContainerService.HintSize="620.8,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Int32">[contadordos]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">0</InArgument>
-              </Assign.Value>
-            </Assign>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="620.8,56" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Iniciamos un contador 2 en 0" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPesaje]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="620.8,588.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.6,472.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[row(4).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,360.8" sap2010:WorkflowViewState.IdRef="If_6">
-                      <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_78">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="337.6,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:Int32">[contadordos]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:Int32">[contadordos + 1]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                        </Sequence>
-                      </If.Then>
-                    </If>
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:ForEachRow>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="620.8,94.4" sap2010:WorkflowViewState.IdRef="Comment_12" Text="//Si el contador dos es igual a cero seguimos con el proceso, si el contadordos es diferente de cero se envía un correo" />
-            <If Condition="[contadordos.Equals(0)]" sap:VirtualizedContainerService.HintSize="620.8,713.6" sap2010:WorkflowViewState.IdRef="If_7">
-              <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,554.4" sap2010:WorkflowViewState.IdRef="Sequence_81">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Comment sap:VirtualizedContainerService.HintSize="337.6,75.2" sap2010:WorkflowViewState.IdRef="Comment_13" Text="// Se envia correo por incidencia de pesaje fuera de rango" />
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que el pesaje del transporte esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="337.6,194.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;javier.revelo@unacem.ec;cristina.flores@unacem.ec">
-                    <ui:SendMail.Files>
-                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                        <InArgument x:TypeArguments="x:String">[strPedidoSAP]</InArgument>
-                      </scg:List>
-                    </ui:SendMail.Files>
-                  </ui:SendMail>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Estimados: El  proceso de facturas de materias primas ha finalizado debido a que el pesaje del transporte esta fuera de rango. Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia.. Saludos.&quot;]" />
-                </Sequence>
-              </If.Else>
-            </If>
-            <Sequence sap:VirtualizedContainerService.HintSize="620.8,2176" sap2010:WorkflowViewState.IdRef="Sequence_80">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:Comment sap:VirtualizedContainerService.HintSize="558.4,56" sap2010:WorkflowViewState.IdRef="Comment_14" Text="// Continuamos con el proceso " />
-              <Sequence sap:VirtualizedContainerService.HintSize="558.4,1968" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <If Condition="[EstadoEjecucionMacroHumedad.Equals(&quot;Exitoso&quot;)]" sap:VirtualizedContainerService.HintSize="948.8,384" sap2010:WorkflowViewState.IdRef="If_8">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="462.4,195.2" sap2010:WorkflowViewState.IdRef="Sequence_86">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="496,564" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="86c80744-471c-497f-96ef-c9627679587a" Version="V2">
-                  <uix:NApplicationCard.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ClickType="Single" DisplayName="Click 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="86c80744-471c-497f-96ef-c9627679587a" Version="V1">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable DesignTimeRectangle="26, 161, 23, 19" FriendlyName="'SAPGUI.GridViewCtrl.1'" FullSelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' tableCol='-1' tableRow='-1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="9fbf648d-de04-45c9-b07c-d18421ecfe4c" InformativeScreenshot="d3f282a3de9c0d9f374aa052bb35e6c8.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-                          </uix:NClick.Target>
-                        </uix:NClick>
-                      </Sequence>
-                    </ActivityAction>
-                  </uix:NApplicationCard.Body>
-                  <uix:NApplicationCard.TargetApp>
-                    <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="8a672a22298c65c8a41ebf7a75df5391.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" />
-                  </uix:NApplicationCard.TargetApp>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_85">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </uix:NApplicationCard>
-                <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Button  Revisión'" sap:VirtualizedContainerService.HintSize="496,160.8" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Revisar   (F9)">
-                  <ucas:SelectMenuItem.Items>
-                    <scg:List x:TypeArguments="x:String" Capacity="32">
-                      <x:String xml:space="preserve">Detalles   (Ctrl+Shift+F3)</x:String>
-                      <x:String xml:space="preserve">Llamar informe...   (Ctrl+Shift+F1)</x:String>
-                      <x:String xml:space="preserve">Marcar todo   (F5)</x:String>
-                      <x:String xml:space="preserve">Desmarcar todo   (F6)</x:String>
-                      <x:String xml:space="preserve">Clasificación ascendente   (Ctrl+F4)</x:String>
-                      <x:String xml:space="preserve">Clasificación descendente   (Ctrl+Shift+F4)</x:String>
-                      <x:String xml:space="preserve">Fijar filtros   (Ctrl+F5)</x:String>
-                      <x:String xml:space="preserve">Total   (Ctrl+F6)</x:String>
-                      <x:String xml:space="preserve">Subtotales...   (Ctrl+Shift+F6)</x:String>
-                      <x:String xml:space="preserve">Desplegar   (Ctrl+F11)</x:String>
-                      <x:String xml:space="preserve">Comprimir   (Ctrl+Shift+F11)</x:String>
-                      <x:String xml:space="preserve">Hoja de cálculo...   (Ctrl+Shift+F7)</x:String>
-                      <x:String xml:space="preserve">Fichero local...   (Ctrl+Shift+F9)</x:String>
-                      <x:String xml:space="preserve">Destinatario de mail   (Ctrl+F7)</x:String>
-                      <x:String xml:space="preserve">Análisis ABC   (Ctrl+F1)</x:String>
-                      <x:String xml:space="preserve">Modificar disposición...   (Ctrl+F8)</x:String>
-                      <x:String xml:space="preserve">Seleccionar disposición...   (Ctrl+F9)</x:String>
-                      <x:String xml:space="preserve">Grabar disposición...   (Ctrl+F10)</x:String>
-                      <x:String xml:space="preserve">Crear Nuevo Ticket   (Shift+F5)</x:String>
-                      <x:String xml:space="preserve">Modificar   (Shift+F8)</x:String>
-                      <x:String xml:space="preserve">Anular entrada del ticket   (Shift+F10)</x:String>
-                      <x:String xml:space="preserve">Imprimir formulario con los datos del ticket   (Ctrl+F12)</x:String>
-                      <x:String xml:space="preserve">Obtener Análisis   (Shift+F6)</x:String>
-                      <x:String xml:space="preserve">Revisar   (F9)</x:String>
-                      <x:String xml:space="preserve">Procesar_EM   (F7)</x:String>
-                      <x:String xml:space="preserve">Liquidar   (Shift+F7)</x:String>
-                      <x:String xml:space="preserve">Imprimi_Liq   (Ctrl+F2)</x:String>
-                      <x:String xml:space="preserve">Actualizar reporte   (Ctrl+F3)</x:String>
-                    </scg:List>
-                  </ucas:SelectMenuItem.Items>
-                  <ucas:SelectMenuItem.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="283733e0-6347-458a-8c1c-abdd8ed2c868" InformativeScreenshot="51a3a7a41fab99c9fbc4d071f0f35a79" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;&lt;sap id='tbar[1]/btn[9]' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ucas:SelectMenuItem.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ucas:SelectMenuItem>
-                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Confirmación de Revisión." sap:VirtualizedContainerService.HintSize="496,679.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V2">
-                  <uix:NApplicationCard.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                      </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="462.4,388" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="544,75.2" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Leemos la hoja1 del archivo de Pedido SAP" />
+                  <ui:ReadRange AddHeaders="True" DataTable="[DataPedidoSAP]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="544,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Hoja1" WorkbookPath="[strPedidoSAP]">
+                    <ui:ReadRange.Range>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </ui:ReadRange.Range>
+                  </ui:ReadRange>
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="544,56" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Iniciamos un contador desde 0" />
+                  <Assign sap:VirtualizedContainerService.HintSize="544,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="544,75.2" sap2010:WorkflowViewState.IdRef="Comment_5" Text="//Hacemos  un loop para contar los registros fuera de rango" />
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPedidoSAP]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="544,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.6,472.8" sap2010:WorkflowViewState.IdRef="Sequence_71">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Si'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V1">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable DesignTimeRectangle="38, 119, 104, 22" ElementType="Button" FriendlyName="'Si'" FullSelectorArgument="&lt;sap id='usr/btnBUTTON_1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnBUTTON_1' check:text='Si' /&gt;" Guid="93ebcb29-d57f-4172-bc27-794892f77c88" InformativeScreenshot="3d1e60db0461503610116e85a66335a0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Confirmación de Revisión.' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-                            </uix:NClick.Target>
-                          </uix:NClick>
+                          <If Condition="[row(9).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,360.8" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="337.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[contador + 1]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                          </If>
                         </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ForEachRow>
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="544,75.2" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// Si el contador es 0 sigue el proceso, si es más de 0 se envía un correo de  incidencia" />
+                  <If Condition="[contador.Equals(0)]" sap:VirtualizedContainerService.HintSize="544,242.4" sap2010:WorkflowViewState.IdRef="If_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Comment sap:VirtualizedContainerService.HintSize="337.6,75.2" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// Se manda correo de incidencia con el archivo de Pedido SAP" />
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que la humedad esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="337.6,194.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
+                          <ui:SendMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">[strPedidoSAP]</InArgument>
+                            </scg:List>
+                          </ui:SendMail.Files>
+                        </ui:SendMail>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Estimados: El  proceso de facturas de materias primas ha finalizado debido a que la humedad esta fuera de rango. Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia.. Saludos.&quot;]" />
                       </Sequence>
-                    </ActivityAction>
-                  </uix:NApplicationCard.Body>
-                  <uix:NApplicationCard.TargetApp>
-                    <uix:TargetApp Area="185, 260, 460, 148" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="5f530bcd138f378571b75aafff50a544.png" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Confirmación de Revisión.' idx='*' /&gt;" />
-                  </uix:NApplicationCard.TargetApp>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </uix:NApplicationCard>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZMM023 Material a Material workflow" sap:VirtualizedContainerService.HintSize="496,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Transacción ZMM023 Material a Material.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_strDiaAnteriorBot">[in_strDiaAnteriorBot]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_strCincoDiasBor">[in_strCincoDiasBot]</InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas  diaria ha finalizado con éxito.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="496,178.4" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima." To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
-                  <ui:SendMail.Files>
-                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
-                  </ui:SendMail.Files>
-                </ui:SendMail>
+                    </If.Else>
+                  </If>
+                  <Sequence DisplayName="Proceso de pesaje y revisión" sap:VirtualizedContainerService.HintSize="544,83.2" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="DataPesaje" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,94.4" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// Continuamos con el proceso y ejecutamos la macro correspondiente a los pesajes del transporte" />
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,309.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Config\Descargas\ZMM023.XLSX">
+                      <ui:ExcelApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,200" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\pesaje.txt" DisplayName="Invoke VBA" EntryMethodName="pesaje" EntryMethodParameters="[{strPedidoSAP}]" sap:VirtualizedContainerService.HintSize="337.6,88" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ExcelApplicationScope.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ExcelApplicationScope>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,75.2" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// Leemos la hoja 2 del archivo de PedidoSAP" />
+                    <ui:ReadRange AddHeaders="True" DataTable="[DataPesaje]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Hoja2" WorkbookPath="[strPedidoSAP]">
+                      <ui:ReadRange.Range>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ui:ReadRange.Range>
+                    </ui:ReadRange>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,56" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Iniciamos un contador 2 en 0" />
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[contadordos]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,56" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Iniciamos un contador 2 en 0" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataPesaje]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.6,472.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[row(4).ToString.Equals (&quot;Fuera&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,360.8" sap2010:WorkflowViewState.IdRef="If_6">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="337.6,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[contadordos]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[contadordos + 1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,94.4" sap2010:WorkflowViewState.IdRef="Comment_12" Text="//Si el contador dos es igual a cero seguimos con el proceso, si el contadordos es diferente de cero se envía un correo" />
+                    <If Condition="[contadordos.Equals(0)]" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="If_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,554.4" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Comment sap:VirtualizedContainerService.HintSize="337.6,75.2" sap2010:WorkflowViewState.IdRef="Comment_13" Text="// Se envia correo por incidencia de pesaje fuera de rango" />
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado debido a que el pesaje del transporte esta fuera de rango.&#xA;Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia..&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="337.6,194.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;javier.revelo@unacem.ec;cristina.flores@unacem.ec">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">[strPedidoSAP]</InArgument>
+                              </scg:List>
+                            </ui:SendMail.Files>
+                          </ui:SendMail>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Estimados: El  proceso de facturas de materias primas ha finalizado debido a que el pesaje del transporte esta fuera de rango. Se anexa el documento de Pedidos SAP para tener más detalle de la incidencia.. Saludos.&quot;]" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <Sequence DisplayName="Se cambia estado de tickets a Revisión" sap:VirtualizedContainerService.HintSize="433.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="558.4,56" sap2010:WorkflowViewState.IdRef="Comment_14" Text="// Continuamos con el proceso " />
+                      <Sequence sap:VirtualizedContainerService.HintSize="558.4,1968" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="496,564" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="86c80744-471c-497f-96ef-c9627679587a" Version="V2">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'SAPGUI.GridViewCtrl.1'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="86c80744-471c-497f-96ef-c9627679587a" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="26, 161, 23, 19" FriendlyName="'SAPGUI.GridViewCtrl.1'" FullSelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' tableCol='-1' tableRow='-1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' check:text='SAPGUI.GridViewCtrl.1' /&gt;" Guid="9fbf648d-de04-45c9-b07c-d18421ecfe4c" InformativeScreenshot="d3f282a3de9c0d9f374aa052bb35e6c8.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="8a672a22298c65c8a41ebf7a75df5391.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" />
+                          </uix:NApplicationCard.TargetApp>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NApplicationCard>
+                        <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Button  Revisión'" sap:VirtualizedContainerService.HintSize="496,160.8" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Revisar   (F9)">
+                          <ucas:SelectMenuItem.Items>
+                            <scg:List x:TypeArguments="x:String" Capacity="32">
+                              <x:String xml:space="preserve">Detalles   (Ctrl+Shift+F3)</x:String>
+                              <x:String xml:space="preserve">Llamar informe...   (Ctrl+Shift+F1)</x:String>
+                              <x:String xml:space="preserve">Marcar todo   (F5)</x:String>
+                              <x:String xml:space="preserve">Desmarcar todo   (F6)</x:String>
+                              <x:String xml:space="preserve">Clasificación ascendente   (Ctrl+F4)</x:String>
+                              <x:String xml:space="preserve">Clasificación descendente   (Ctrl+Shift+F4)</x:String>
+                              <x:String xml:space="preserve">Fijar filtros   (Ctrl+F5)</x:String>
+                              <x:String xml:space="preserve">Total   (Ctrl+F6)</x:String>
+                              <x:String xml:space="preserve">Subtotales...   (Ctrl+Shift+F6)</x:String>
+                              <x:String xml:space="preserve">Desplegar   (Ctrl+F11)</x:String>
+                              <x:String xml:space="preserve">Comprimir   (Ctrl+Shift+F11)</x:String>
+                              <x:String xml:space="preserve">Hoja de cálculo...   (Ctrl+Shift+F7)</x:String>
+                              <x:String xml:space="preserve">Fichero local...   (Ctrl+Shift+F9)</x:String>
+                              <x:String xml:space="preserve">Destinatario de mail   (Ctrl+F7)</x:String>
+                              <x:String xml:space="preserve">Análisis ABC   (Ctrl+F1)</x:String>
+                              <x:String xml:space="preserve">Modificar disposición...   (Ctrl+F8)</x:String>
+                              <x:String xml:space="preserve">Seleccionar disposición...   (Ctrl+F9)</x:String>
+                              <x:String xml:space="preserve">Grabar disposición...   (Ctrl+F10)</x:String>
+                              <x:String xml:space="preserve">Crear Nuevo Ticket   (Shift+F5)</x:String>
+                              <x:String xml:space="preserve">Modificar   (Shift+F8)</x:String>
+                              <x:String xml:space="preserve">Anular entrada del ticket   (Shift+F10)</x:String>
+                              <x:String xml:space="preserve">Imprimir formulario con los datos del ticket   (Ctrl+F12)</x:String>
+                              <x:String xml:space="preserve">Obtener Análisis   (Shift+F6)</x:String>
+                              <x:String xml:space="preserve">Revisar   (F9)</x:String>
+                              <x:String xml:space="preserve">Procesar_EM   (F7)</x:String>
+                              <x:String xml:space="preserve">Liquidar   (Shift+F7)</x:String>
+                              <x:String xml:space="preserve">Imprimi_Liq   (Ctrl+F2)</x:String>
+                              <x:String xml:space="preserve">Actualizar reporte   (Ctrl+F3)</x:String>
+                            </scg:List>
+                          </ucas:SelectMenuItem.Items>
+                          <ucas:SelectMenuItem.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="283733e0-6347-458a-8c1c-abdd8ed2c868" InformativeScreenshot="51a3a7a41fab99c9fbc4d071f0f35a79" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;&lt;sap id='tbar[1]/btn[9]' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ucas:SelectMenuItem.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ucas:SelectMenuItem>
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Confirmación de Revisión." sap:VirtualizedContainerService.HintSize="496,679.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V2">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence sap:VirtualizedContainerService.HintSize="462.4,388" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Si'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e0b5bb3a-88df-447d-ae5b-1a0dd14eaadf" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="38, 119, 104, 22" ElementType="Button" FriendlyName="'Si'" FullSelectorArgument="&lt;sap id='usr/btnBUTTON_1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnBUTTON_1' check:text='Si' /&gt;" Guid="93ebcb29-d57f-4172-bc27-794892f77c88" InformativeScreenshot="3d1e60db0461503610116e85a66335a0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Confirmación de Revisión.' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="185, 260, 460, 148" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="5f530bcd138f378571b75aafff50a544.png" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Confirmación de Revisión.' idx='*' /&gt;" />
+                          </uix:NApplicationCard.TargetApp>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NApplicationCard>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZMM023 Material a Material workflow" sap:VirtualizedContainerService.HintSize="496,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Transacción ZMM023 Material a Material.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_strDiaAnteriorBot">[in_strDiaAnteriorBot]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_strCincoDiasBor">[in_strCincoDiasBot]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas  diaria ha finalizado con éxito.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="496,178.4" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima." To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
+                          <ui:SendMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+                          </ui:SendMail.Files>
+                        </ui:SendMail>
+                      </Sequence>
+                    </Sequence>
+                  </Sequence>
+                </Sequence>
               </Sequence>
-            </Sequence>
-          </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_87">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="431.2,576.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <Sequence sap:VirtualizedContainerService.HintSize="417.6,795.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="SetPassword" />
           </Sequence.Variables>
@@ -852,18 +919,23 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas ha finalizado, ya que no se encontraron datos de Control de Calidad en la transacción ZMM023.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="368.8,178.4" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;javier.revelo@unacem.ec;cristina.flores@unacem.ec">
+          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xD;&#xA;El  proceso de facturas de materias primas ha finalizadola etapa de Registro, ya que no se encontraron datos de Control de Calidad en la transacción ZMM023.&#xD;&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="355.2,178.4" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima" To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;javier.revelo@unacem.ec;cristina.flores@unacem.ec">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
             </ui:SendMail.Files>
           </ui:SendMail>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="368.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Estimados: El  proceso de facturas de materias primas ha finalizado, ya que no se encontraron datos de Control de Calidad en la transacción ZMM023. Saludos.&quot;]" />
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZMM023 Material a Material workflow" sap:VirtualizedContainerService.HintSize="368.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Transacción ZMM023 Material a Material.xaml">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="355.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Estimados: El  proceso de facturas de materias primas ha finalizado la etapa de Registro, ya que no se encontraron datos de Control de Calidad en la transacción ZMM023. Saludos.&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZMM023 Material a Material workflow" sap:VirtualizedContainerService.HintSize="355.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Transacción ZMM023 Material a Material.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_strDiaAnteriorBot">[in_strDiaAnteriorBot]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_strCincoDiasBor">[in_strCincoDiasBot]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
+          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas  diaria ha finalizado con éxito.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="355.2,178.4" sap2010:WorkflowViewState.IdRef="SendMail_5" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima." To="milton.alvarez@ec.ey.com;benjamin.cruz.sarmiento@mx.ey.com;cristina.flores@unacem.ec;javier.revelo@unacem.ec">
+            <ui:SendMail.Files>
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+            </ui:SendMail.Files>
+          </ui:SendMail>
         </Sequence>
       </If.Else>
     </If>
